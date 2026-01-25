@@ -4,117 +4,118 @@
 <meta charset="UTF-8">
 <title>Usługi remontowo-budowlane – Vitalii Tychkovskyi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+header {
+  background: #1f2933;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  margin: 10px 0 20px;
+}
+
 .features {
-  margin: 20px 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .feature {
   background: rgba(255,255,255,0.1);
   padding: 8px 16px;
   border-radius: 20px;
-  font-size: 16px;
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
-}
-
-header {
-    background: #1f2933;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 32px;
-}
-
-header p {
-    margin: 10px 0 20px;
-    font-size: 18px;
 }
 
 .buttons a {
-    display: inline-block;
-    margin: 8px;
-    padding: 12px 20px;
-    background: #22c55e;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 24px;
+  background: #22c55e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
 .buttons a.secondary {
-    background: #3b82f6;
+  background: #3b82f6;
 }
 
 section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
 h2 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .services, .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
 }
 
 .gallery img {
-    width: 100%;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 form {
-    max-width: 500px;
-    margin: auto;
-    background: white;
-    padding: 25px;
-    border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
 }
 
 input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
 }
 
 button {
-    width: 100%;
-    padding: 12px;
-    background: #22c55e;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 6px;
+  width: 100%;
+  padding: 12px;
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
 footer {
-    background: #1f2933;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
+  background: #1f2933;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
 }
 </style>
 </head>
@@ -122,54 +123,55 @@ footer {
 <body>
 
 <header>
-    <h1>Usługi remontowo-budowlane – Łódź i okolice</h1>
-    <p>Solidnie • Terminowo • Profesjonalnie</p>
-<div class="features">
-  <div class="feature">📍 Łódź i okolice</div>
-  <div class="feature">✅ Gwarancja 2 lata</div>
-  <div class="feature">💰 Bezpłatna wycena</div>
-</div>
+  <h1>Usługi remontowo-budowlane – Łódź i okolice</h1>
+  <p>Solidnie • Terminowo • Profesjonalnie</p>
 
-    <div class="buttons">
-<a href="tel:+48787118032">📞 Zadzwoń</a>
-        <a class="secondary" href="https://wa.me/48787118032">💬 WhatsApp</a>
-    </div>
+  <div class="features">
+    <div class="feature">📍 Łódź i okolice</div>
+    <div class="feature">✅ Gwarancja 2 lata</div>
+    <div class="feature">💰 Bezpłatna wycena</div>
+  </div>
+
+  <div class="buttons">
+    <a href="tel:+48787118032">📞 Zadzwoń</a>
+    <a class="secondary" href="https://wa.me/48787118032">💬 WhatsApp</a>
+  </div>
 </header>
 
 <section>
-    <h2>Zakres usług</h2>
-    <div class="services">
-        <div class="card">Wykończenia wnętrz</div>
-        <div class="card">Remonty mieszkań i domów</div>
-        <div class="card">Malowanie i szpachlowanie</div>
-        <div class="card">Układanie paneli i płytek</div>
-        <div class="card">Prace ogólnobudowlane</div>
-        <div class="card">Montaż drzwi i okien</div>
-    </div>
+  <h2>Zakres usług</h2>
+  <div class="services">
+    <div class="card">Wykończenia wnętrz</div>
+    <div class="card">Remonty mieszkań i domów</div>
+    <div class="card">Malowanie i szpachlowanie</div>
+    <div class="card">Układanie paneli i płytek</div>
+    <div class="card">Prace ogólnobudowlane</div>
+    <div class="card">Montaż drzwi i okien</div>
+  </div>
 </section>
 
 <section>
-    <h2>Galeria realizacji</h2>
-    <div class="gallery">
-        <img src="https://via.placeholder.com/400x300?text=Zdjęcie+1">
-        <img src="https://via.placeholder.com/400x300?text=Zdjęcie+2">
-        <img src="https://via.placeholder.com/400x300?text=Zdjęcie+3">
-        <img src="https://via.placeholder.com/400x300?text=Zdjęcie+4">
-    </div>
+  <h2>Galeria realizacji</h2>
+  <div class="gallery">
+    <img src="https://via.placeholder.com/400x300?text=Zdjęcie+1">
+    <img src="https://via.placeholder.com/400x300?text=Zdjęcie+2">
+    <img src="https://via.placeholder.com/400x300?text=Zdjęcie+3">
+    <img src="https://via.placeholder.com/400x300?text=Zdjęcie+4">
+  </div>
 </section>
 
 <section>
-    <h2>Formularz kontaktowy</h2>
-    <form>
-        <input type="text" placeholder="Imię" required>
-        <input type="tel" placeholder="Telefon" required>
-        <textarea rows="4" placeholder="Wiadomość"></textarea>
-        <button>Wyślij zapytanie</button>
-    </form>
+  <h2>Formularz kontaktowy</h2>
+  <form>
+    <input type="text" placeholder="Imię" required>
+    <input type="tel" placeholder="Telefon" required>
+    <textarea rows="4" placeholder="Wiadomość"></textarea>
+    <button>Wyślij zapytanie</button>
+  </form>
 </section>
 
 <footer>
-    © 2026 Usługi remontowo-budowlane – Vitalii Tychkovskyi | Tel: +48 787 118 032
+  © 2026 Usługi remontowo-budowlane – Vitalii Tychkovskyi | Tel: +48 787 118 032
 </footer>
 
 </body>
