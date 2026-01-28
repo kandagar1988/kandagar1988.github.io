@@ -22,30 +22,42 @@ header {
   padding: 40px 20px;
 }
 
-.hero {
-  position: relative;
-  min-height: 75vh;
-  background: url("images/vit-bud/IMG_20240222_071908.jpg") center / cover no-repeat;
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  margin: 10px 0 20px;
+}
+
+.features {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   align-items: center;
-  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.hero .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
+.feature {
+  background: rgba(255,255,255,0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
+.buttons a {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 24px;
+  background: #22c55e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
-h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
+.buttons a.secondary {
+  background: #3b82f6;
 }
 
 section {
@@ -59,40 +71,22 @@ h2 {
   margin-bottom: 20px;
 }
 
-.services {
+.services, .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .card {
   background: white;
-  padding: 15px;
-  border-radius: 6px;
+  padding: 20px;
+  border-radius: 8px;
   text-align: center;
-}
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-    background: #000;
 }
 
 .gallery img {
-    width: 100%;
-    height: auto;
-    max-height: 420px;
-    object-fit: contain;
-    background: #000;
-    border-radius: 8px;
-    cursor: pointer;
-    image-rendering: auto;
-    transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
+  width: 100%;
+  border-radius: 8px;
 }
 
 form {
@@ -125,27 +119,25 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
+}
 </style>
 </head>
 
 <body>
 
-<header class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1>Usługi remontowo-budowlane – Łódź i okolice</h1>
-    <p>Solidnie • Terminowo • Profesjonalnie</p>
+<header>
+  <h1>Usługi remontowo-budowlane – Łódź i okolice</h1>
+  <p>Solidnie • Terminowo • Profesjonalnie</p>
 
-    <div class="features">
-      <div class="feature">📍 Łódź i okolice</div>
-      <div class="feature">✅ Gwarancja 2 lata</div>
-      <div class="feature">🔥 Bezpłatna wycena</div>
-    </div>
+  <div class="features">
+    <div class="feature">📍 Łódź i okolice</div>
+    <div class="feature">✅ Gwarancja 2 lata</div>
+    <div class="feature">💰 Bezpłatna wycena</div>
+  </div>
 
-    <div class="buttons">
-      <a href="tel:+48787118032">📞 Zadzwoń</a>
-      <a class="secondary" href="https://wa.me/48787118032">💬 WhatsApp</a>
-    </div>
+  <div class="buttons">
+    <a href="tel:+48787118032">📞 Zadzwoń</a>
+   <a class="secondary" href="https://wa.me/48787118032?text=Dzień%20dobry,%20chciałbym%20wycenić%20remont" target="_blank">💬 WhatsApp</a>
   </div>
 </header>
 
@@ -173,49 +165,17 @@ footer {
 <section>
   <h2>Galeria realizacji</h2>
   <div class="gallery">
-<a href="images/vit-bud/IMG_20241022_071908.jpg">
-  <img src="images/vit-bud/IMG_20241022_071908.jpg">
-</a>
-
-<a href="images/vit-bud/IMG_20241022_071927.jpg">
-  <img src="images/vit-bud/IMG_20241022_071927.jpg">
-</a>
-
-<a href="images/vit-bud/IMG_20250215_144012.jpg">
-  <img src="images/vit-bud/IMG_20250215_144012.jpg">
-</a>
-
-<a href="images/vit-bud/IMG_20250318_134147.jpg">
-  <img src="images/vit-bud/IMG_20250318_134147.jpg">
-</a>
-
-<a href="images/vit-bud/IMG_20250215_144012.jpg">
-  <img src="images/vit-bud/IMG_20250215_144012.jpg">
-</a>
-
-<a href="images/vit-bud/IMG_20250318_134147.jpg">
-  <img src="images/vit-bud/IMG_20250318_134147.jpg">
-</a>
-
-<a href="images/vit-bud/IMG_20250318_134153.jpg">
-  <img src="images/vit-bud/IMG_20250318_134153.jpg">
-</a>
-
-<a href="images/vit-bud/IMG_20250318_134212.jpg">
-  <img src="images/vit-bud/IMG_20250318_134212.jpg">
-</a>
-
-<a href="images/vit-bud/IMG_20250515_145011.jpg">
-  <img src="images/vit-bud/IMG_20250515_145011.jpg">
-</a>
-
-<a href="images/vit-bud/IMG_20250515_145022.jpg">
-  <img src="images/vit-bud/IMG_20250515_145022.jpg">
-</a>
-
-<a href="images/vit-bud/P80810-092850.jpg">
-  <img src="images/vit-bud/P80810-092850.jpg">
-</a>
+ <img src="images/vit-bud/IMG-0cde353a274bbb4a92d01b9c63d0ecda-V.jpg">
+<img src="images/vit-bud/IMG-b297425eb56df9d3adb911132e0d4878-V.jpg">
+<img src="images/vit-bud/IMG_20241022_071908.jpg">
+<img src="images/vit-bud/IMG_20241022_071927.jpg">
+<img src="images/vit-bud/IMG_20250215_144012.jpg">
+<img src="images/vit-bud/IMG_20250318_134147.jpg">
+<img src="images/vit-bud/IMG_20250318_134153.jpg">
+<img src="images/vit-bud/IMG_20250318_134212.jpg">
+<img src="images/vit-bud/IMG_20250515_145011.jpg">
+<img src="images/vit-bud/IMG_20250515_145022.jpg">
+<img src="images/vit-bud/P80810-092850.jpg">
   </div>
 </section>
 
@@ -232,5 +192,37 @@ footer {
 <footer>
   © 2026 Usługi remontowo-budowlane – Vitalii Tychkovskyi | Tel: +48 787 118 032
 </footer>
+<!-- Окно для увеличения фото -->
+<div id="lightbox" style="
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+">
+  <img id="lightbox-img" style="max-width:95%; max-height:95%; border-radius:10px;">
+</div>
+
+<script>
+  const images = document.querySelectorAll(".gallery img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+</script>
 </body>
 </html>
