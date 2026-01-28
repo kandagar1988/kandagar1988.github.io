@@ -81,11 +81,13 @@ h2 {
 
 .gallery img {
     width: 100%;
-  aspect-ratio: 3 / 4;
-    object-fit: cover;
-  background: black;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    background: #000;
     border-radius: 8px;
     cursor: pointer;
+    image-rendering: auto;
     transition: transform 0.3s ease;
 }
 
