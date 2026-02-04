@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Układanie płytek Łódź – glazurnik, gres, terakota</title>
+
+<meta name="description" content="Profesjonalne układanie płytek w Łodzi i okolicach. Glazura, gres, terakota, równe fugi i solidne wykonanie.">
+<meta name="keywords" content="układanie płytek łódź, glazurnik łódź, płytki gres łódź, terakota łódź">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f4f4f4;
+  color:#333;
+}
+
+/* HEADER */
+header{
+  background:#1f2933;
+  color:#fff;
+  text-align:center;
+  padding:50px 20px;
+}
+header h1{margin:0;font-size:36px;}
+header p{margin:10px 0 20px;font-size:18px;}
+.buttons a{
+  display:inline-block;
+  margin:5px;
+  padding:12px 20px;
+  border-radius:6px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
+.call{background:#22c55e;}
+.whatsapp{background:#25d366;}
+
+/* SECTIONS */
+section{
+  padding:50px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+h2{text-align:center;margin-bottom:30px;}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  text-align:center;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.gallery img{
+  width:100%;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.3s;
+}
+.gallery img:hover{transform:scale(1.04);}
+
+/* FOOTER */
+footer{
+  background:#1f2933;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:40px;
+}
+
+/* LIGHTBOX */
+#lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+#lightbox img{
+  max-width:95%;
+  max-height:95%;
+  border-radius:12px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Układanie płytek – Łódź</h1>
+  <p>Glazura • Gres • Terakota • Dokładne wykończenie</p>
+  <div class="buttons">
+    <a class="call" href="tel:+48787118032">Zadzwoń</a>
+    <a class="whatsapp" target="_blank"
+       href="https://wa.me/48787118032?text=Dzień%20dobry,%20chciałbym%20wycenę%20układania%20płytek">
+       WhatsApp
+    </a>
+  </div>
+</header>
+
+<section>
+<h2>Dlaczego my</h2>
+<div class="services">
+  <div class="card">✓ Doświadczenie i precyzja</div>
+  <div class="card">✓ Równe płytki i fugi</div>
+  <div class="card">✓ Glazura, gres, terakota</div>
+  <div class="card">✓ Prace w łazienkach i kuchniach</div>
+  <div class="card">✓ Terminowo i solidnie</div>
+  <div class="card">✓ Łódź i okolice</div>
+</div>
+</section>
+
+<section>
+<h2>Nasze realizacje – układanie płytek</h2>
+
+<div class="gallery">
+  <img src="images/vit-bud/IMG_20240122_071908.jpg">
+  <img src="images/vit-bud/IMG_20240122_071927.jpg">
+  <img src="images/vit-bud/IMG_20250318_134147.jpg">
+  <img src="images/vit-bud/IMG_20250318_134153.jpg">
+  <img src="images/vit-bud/IMG_20250515_145011.jpg">
+  <img src="images/vit-bud/IMG_20250515_145022.jpg">
+</div>
+</section>
+
+<footer>
+© 2026 Układanie płytek Łódź · Tel: +48 787 118 032  
+<br>
+<a href="/" style="color:#9ca3af;">Usługi remontowe Łódź – strona główna</a>
+</footer>
+
+<div id="lightbox"><img></div>
+
+<script>
+const imgs=document.querySelectorAll(".gallery img");
+const lb=document.getElementById("lightbox");
+const lbImg=lb.querySelector("img");
+
+imgs.forEach(i=>{
+  i.onclick=()=>{lb.style.display="flex";lbImg.src=i.src;}
+});
+lb.onclick=()=>lb.style.display="none";
+</script>
+
+</body>
+</html>
