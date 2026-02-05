@@ -2,128 +2,136 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Wykończenia wnętrz Łódź – Vit-Bud</title>
-<meta name="description" content="Profesjonalne wykończenia wnętrz w Łodzi. Remonty mieszkań, łazienek, kuchni. Zadzwoń: 787 118 032">
+<title>Wykończenia wnętrz Łódź | Vit-Bud</title>
+<meta name="description" content="Wykończenia wnętrz Łódź – kompleksowe remonty mieszkań i domów. Łazienki, kuchnie, płytki. Zadzwoń 787 118 032">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
-  margin: 0;
+  margin:0;
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #222;
+  background:#f5f5f5;
+  color:#222;
 }
-header {
-  background: #111;
-  color: #fff;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+/* === TOP BAR (CZARNY) === */
+.topbar {
+  background:#000;
+  color:#fff;
+  padding:12px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
-header a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 15px;
-  font-weight: bold;
+
+.topbar a {
+  color:#fff;
+  text-decoration:none;
+  margin-left:15px;
+  font-weight:bold;
 }
+
+/* === HERO === */
 .hero {
-  padding: 40px 20px;
-  background: #fff;
-  text-align: center;
+  background:#fff;
+  padding:50px 20px;
+  text-align:center;
 }
+
 .hero h1 {
-  margin-bottom: 10px;
+  font-size:36px;
+  margin-bottom:10px;
 }
-.buttons a {
-  display: inline-block;
-  margin: 10px;
-  padding: 15px 25px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
+
+.hero p {
+  font-size:18px;
+  margin-bottom:25px;
 }
+
+.btn {
+  display:inline-block;
+  padding:12px 20px;
+  margin:5px;
+  background:#000;
+  color:#fff;
+  text-decoration:none;
+  border-radius:5px;
+}
+
+/* === CONTENT === */
 .section {
-  padding: 40px 20px;
-  background: #fff;
-  margin-top: 10px;
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px;
+  background:#fff;
+  margin-bottom:20px;
 }
+
+.section h2 {
+  margin-bottom:15px;
+}
+
+/* === GALLERY === */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 10px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
 }
+
 .gallery img {
-  width: 100%;
-  border-radius: 5px;
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:6px;
 }
-ul {
-  line-height: 1.8;
+
+/* === FOOTER === */
+.footer {
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:25px;
 }
-.contact {
-  background: #111;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-}
-.contact a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
+
+.footer a {
+  color:#fff;
+  text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div><strong>Vit-Bud</strong></div>
+<!-- TOP BAR -->
+<div class="topbar">
+  <strong>Vit-Bud</strong>
   <div>
     <a href="tel:787118032">📞 Zadzwoń</a>
     <a href="https://wa.me/48787118032">💬 WhatsApp</a>
   </div>
-</header>
+</div>
 
-<section class="hero">
+<!-- HERO -->
+<div class="hero">
   <h1>Wykończenia wnętrz Łódź</h1>
   <p>Kompleksowe remonty mieszkań, domów i lokali</p>
+  <a class="btn" href="tel:787118032">Zadzwoń teraz</a>
+  <a class="btn" href="https://wa.me/48787118032">Napisz WhatsApp</a>
+</div>
 
-  <div class="buttons">
-    <a href="tel:787118032">📞 Zadzwoń teraz</a>
-    <a href="https://wa.me/48787118032">💬 Napisz WhatsApp</a>
-  </div>
-</section>
-
-<section class="section">
+<!-- WHY -->
+<div class="section">
   <h2>Dlaczego Vit-Bud?</h2>
   <ul>
-    <li>✔ Doświadczenie w wykończeniach wnętrz</li>
-    <li>✔ Realne zdjęcia wykonanych prac</li>
-    <li>✔ Terminowo i solidnie</li>
-    <li>✔ Łódź i okolice</li>
+    <li>Doświadczenie w wykończeniach wnętrz</li>
+    <li>Rzetelna i terminowa realizacja</li>
+    <li>Realne zdjęcia wykonanych prac</li>
+    <li>Łódź i okolice</li>
   </ul>
-</section>
+</div>
 
-<section class="section">
-  <h2>Nasze realizacje</h2>
-  <div class="gallery">
-    <img src="images/vit-bud/IMG_20241022_071908.jpg">
-    <img src="images/vit-bud/IMG_20241022_071927.jpg">
-    <img src="images/vit-bud/IMG_20250215_144012.jpg">
-    <img src="images/vit-bud/IMG_20250318_134147.jpg">
-    <img src="images/vit-bud/IMG_20250318_134153.jpg">
-    <img src="images/vit-bud/IMG_20250515_145011.jpg">
-    <img src="images/vit-bud/P80810-092850.jpg">
-  </div>
-</section>
-
-<section class="section">
+<!-- SERVICES -->
+<div class="section">
   <h2>Zakres usług</h2>
   <ul>
     <li>Wykończenia wnętrz mieszkań i domów</li>
@@ -132,18 +140,27 @@ footer {
     <li>Malowanie, gładzie, zabudowy GK</li>
     <li>Kompleksowe usługi remontowe</li>
   </ul>
-</section>
+</div>
 
-<section class="contact">
-  <h2>Kontakt</h2>
+<!-- GALLERY -->
+<div class="section">
+  <h2>Nasze realizacje</h2>
+  <div class="gallery">
+    <img src="images/vit-bud/IMG_20241022_071908.jpg">
+    <img src="images/vit-bud/IMG_20241022_071927.jpg">
+    <img src="images/vit-bud/IMG_20250318_134147.jpg">
+    <img src="images/vit-bud/IMG_20250318_134153.jpg">
+    <img src="images/vit-bud/IMG_20250515_145011.jpg">
+    <img src="images/vit-bud/IMG_20250515_145022.jpg">
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
   <p>📍 Łódź i okolice</p>
   <p>📞 <a href="tel:787118032">787 118 032</a></p>
-  <p>💬 <a href="https://wa.me/48787118032">WhatsApp</a></p>
-</section>
-
-<footer>
-  © Vit-Bud – Wykończenia wnętrz Łódź
-</footer>
+  <p>© Vit-Bud – Wykończenia wnętrz Łódź</p>
+</div>
 
 </body>
 </html>
