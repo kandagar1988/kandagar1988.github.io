@@ -43,12 +43,26 @@ ul {
   gap: 20px;
   margin-top: 30px;
 }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
 .gallery img {
   width: 100%;
-  height: 260px;
+  height: 360px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
 }
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
 .contact {
   margin-top: 60px;
   padding: 30px;
@@ -112,9 +126,31 @@ Realizujemy kompleksowe prace wykończeniowe w mieszkaniach, domach oraz lokalac
 </div>
 
 <div class="contact">
-  <p>📞 Zadzwoń i zamów bezpłatną wycenę:</p>
-  <a href="tel:+48787118032">+48 787 118 032</a>
-  <p>📍 Łódź i okolice</p>
+  <h2>Kontakt</h2>
+
+  <p style="font-size:20px;margin-bottom:10px;">
+    📞 Tel:
+    <a href="tel:+48787118032">+48 787 118 032</a>
+  </p>
+
+  <p style="font-size:18px;">
+    📍 Łódź i okolice
+  </p>
+
+  <a href="https://wa.me/48787118032"
+     style="
+       display:inline-block;
+       margin-top:20px;
+       padding:14px 28px;
+       background:#25d366;
+       color:#000;
+       font-weight:bold;
+       border-radius:30px;
+       text-decoration:none;
+       font-size:18px;
+     ">
+    Napisz na WhatsApp
+  </a>
 </div>
 
 </section>
