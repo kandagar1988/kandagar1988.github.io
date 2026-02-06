@@ -1,0 +1,33 @@
+.gallery img {
+  width: 200px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* ===== MODAL IMAGE ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal img {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
