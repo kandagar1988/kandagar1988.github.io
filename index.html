@@ -449,32 +449,28 @@ footer {
 </div>
 
 <script>
-  const images = document.querySelectorAll(".gallery img");
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
+const images = document.querySelectorAll("#gallery img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
 
-  images.forEach(img => {
-    img.addEventListener("click", () => {
-      lightbox.style.display = "flex";
-      lightboxImg.src = img.src;
-    });
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
   });
+});
 
-  lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
+lightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+function scrollGallery(direction) {
+  const gallery = document.getElementById("gallery");
+  gallery.scrollBy({
+    left: direction * 320,
+    behavior: "smooth"
   });
-  // Анимация блоков info-box при скролле
-const boxes = document.querySelectorAll('.info-box');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.2 });
-
-boxes.forEach(box => observer.observe(box));
+}
 </script>
 </body>
 </html>
