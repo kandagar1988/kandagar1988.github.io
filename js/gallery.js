@@ -1,6 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
- const images = document.querySelectorAll(".slider-track img");
+  const track = document.querySelector(".slider-track");
+  const slides = document.querySelectorAll(".slider-track img");
+  const prev = document.querySelector(".nav.prev");
+  const next = document.querySelector(".nav.next");
 
+  if (!track || slides.length === 0 || !prev || !next) {
+    console.error("Slider elements not found");
+    return;
+  }
+
+  let index = 0;
+
+  function updateSlider() {
+    const slideWidth = slides[0].offsetWidth + 20;
+    track.style.transform = `translateX(${-index * slideWidth}px)`;
+  }
+
+  next.addEventListener("click", () => {
+    if (index < slides.length - 1) {
+      index++;
+      updateSlider();
+    }
+  });
+
+  prev.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      updateSlider();
+    }
+  });
+
+  // 🔍 увеличение фото
   const overlay = document.createElement("div");
   overlay.style.position = "fixed";
   overlay.style.top = "0";
@@ -21,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   overlay.appendChild(bigImg);
   document.body.appendChild(overlay);
 
-  images.forEach(img => {
+  slides.forEach(img => {
     img.style.cursor = "pointer";
     img.addEventListener("click", () => {
       bigImg.src = img.src;
@@ -32,4 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
   overlay.addEventListener("click", () => {
     overlay.style.display = "none";
   });
+
+  window.addEventListener("resize", updateSlider);
 });
