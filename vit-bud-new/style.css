@@ -2,6 +2,12 @@
   width: 200px;
   cursor: pointer;
   margin: 10px;
+  position: relative;
+  z-index: 10;
+}
+.gallery {
+  position: relative;
+  z-index: 10;
 }
 
 /* ===== MODAL IMAGE ===== */
