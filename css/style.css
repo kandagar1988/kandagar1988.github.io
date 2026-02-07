@@ -99,3 +99,52 @@ footer {
   font-size: 14px;
   opacity: 0.6;
 }
+
+.gallery-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.slider {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slider-track img {
+  width: 300px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin: 0 10px;
+  flex-shrink: 0;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  padding: 10px 16px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav.prev { left: 0; }
+.nav.next { right: 0; }
+
+@media (max-width: 768px) {
+  .slider-track img {
+    width: 90vw;
+    height: 60vh;
+  }
+}
