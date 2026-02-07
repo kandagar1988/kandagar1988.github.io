@@ -218,3 +218,72 @@ footer {
     padding-top: 170px !important;
   }
 }
+/* ===== FINAL HEADER SIZE FIX (OVERRIDE ALL) ===== */
+
+/* DESKTOP */
+.top-header {
+  height: 130px !important;
+}
+
+.header-container {
+  height: 130px !important;
+  max-width: 1400px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* LOGO */
+.logo {
+  font-size: 38px !important;
+  font-weight: 800 !important;
+}
+
+/* MENU */
+.main-nav a {
+  font-size: 21px !important;
+  font-weight: 600 !important;
+  padding: 10px 10px !important;
+}
+
+/* RIGHT BUTTON */
+.header-btn {
+  font-size: 18px !important;
+  padding: 14px 28px !important;
+}
+
+/* HERO OFFSET */
+.hero {
+  padding-top: 200px !important;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  .top-header {
+    height: auto !important;
+  }
+
+  .header-container {
+    flex-direction: column !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+
+  .logo {
+    font-size: 28px !important;
+  }
+
+  .main-nav {
+    display: none !important;
+  }
+
+  .header-btn {
+    font-size: 16px !important;
+    padding: 12px 22px !important;
+  }
+
+  .hero {
+    padding-top: 220px !important;
+  }
+}
