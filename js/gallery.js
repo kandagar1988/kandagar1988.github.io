@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll(".gallery img");
+ const images = document.querySelectorAll(".slider-track img");
 
   const overlay = document.createElement("div");
   overlay.style.position = "fixed";
