@@ -1,514 +1,76 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta name="google-site-verification" content="B2il5-oFIYLSlFpiDpteVCTlJAw-GPU5wk-qbU1y0LM" />
 <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Wykończenia mieszkań i domów w Łodzi i okolicach. Remonty łazienek, szpachlowanie, malowanie, układanie płytek. Darmowa wycena." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vit-Bud – Usługi remontowe Łódź</title>
+<meta name="description" content="Profesjonalne usługi remontowe w Łodzi i okolicach. Remonty mieszkań, łazienek, wykończenia wnętrz.">
 
-<meta name="keywords" content="wykończenia mieszkań Łódź, wykończenia domów Łódź, remont łazienki Łódź, szpachlowanie Łódź, malowanie Łódź" />
-<link rel="canonical" href="https://vit-bud-wykonczenia-lodz.pl/">
-<title>Usługi remontowe Łódź – remonty łazienek, wykończenia mieszkań | Vit-Bud</title>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Vit-Bud Usługi Remontowo-Budowlane",
-  "url": "https://vit-bud-wykonczenia-lodz.pl/",
-  "telephone": "+48787118032",
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": "Łódź i okolice"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Łódź",
-    "addressCountry": "PL"
-  },
-  "sameAs": [
-    "https://www.google.com/maps?cid=YOUR_GOOGLE_BUSINESS_ID"
-  ]
-}
-</script>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
-}
-
-header {
-  background: #1f2933;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 32px;
-}
-
-header p {
-  margin: 10px 0 20px;
-}
-
-.features {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.feature {
-  background: rgba(255,255,255,0.1);
-  padding: 8px 16px;
-  border-radius: 20px;
-}
-
-.buttons a {
-  display: inline-block;
-  margin: 8px;
-  padding: 12px 24px;
-  background: #22c55e;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-a.card {
-  text-decoration: none;
-  color: #000;
-  display: block;
-}
-
-a.card:visited {
-  color: #000;
-}
-
-a.card:hover {
-  color: #000;
-}
-.card {
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-}
-
-.buttons a.secondary {
-  background: #3b82f6;
-}
-
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.info-box {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px;
-  margin: 40px auto;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  max-width: 900px;
-}
-
-.info-box h2 {
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-.info-box ul {
-  margin-top: 12px;
-  padding-left: 20px;
-}
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  align-items: stretch;
-}
-.services .card {
-  min-height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 768px) {
-  .services {
-    grid-template-columns: 1fr;
-  }
-}
-/* Анимация появления */
-.info-box {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.info-box.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-/* ===== GALERIA HORYZONTALNA (jak Projektorama) ===== */
-
-.gallery-wrapper {
-    position: relative;
-    margin: 40px 0;
-}
-
-.gallery-scroll {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 10px 0;
-}
-
-.gallery-scroll img {
-    height: 220px;
-    width: auto;
-    border-radius: 14px;
-    object-fit: cover;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.gallery-scroll img:hover {
-    transform: scale(1.05);
-}
-
-.gallery-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    border: none;
-    font-size: 26px;
-    width: 42px;
-    height: 42px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
-}
-
-.gallery-arrow.left {
-    left: -20px;
-}
-
-.gallery-arrow.right {
-    right: -20px;
-}
-
-@media (max-width: 768px) {
-    .gallery-arrow {
-        display: none;
-    }
-
-    .gallery-scroll img {
-        height: 180px;
-    }
-}
-
-form {
-  max-width: 500px;
-  margin: auto;
-  background: white;
-  padding: 25px;
-  border-radius: 8px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  background: #22c55e;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-}
-
-footer {
-  background: #1f2933;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-}
-  .hero {
-  background: linear-gradient(120deg, #111827, #1f2933);
-  color: #fff;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 18px;
-  opacity: 0.9;
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.hero-btn {
-  background: #22c55e;
-  color: #000;
-  padding: 14px 26px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.hero-btn.secondary {
-  background: #3b82f6;
-  color: #fff;
-}
-
-/* 📱 TELEFON */
-@media (max-width: 768px) {
-  .hero {
-    padding: 50px 16px;
-  }
-  .hero h1 {
-    font-size: 24px;
-  }
-  .hero p {
-    font-size: 15px;
-  }
-}
-  /* === MOBILE HERO BUTTONS === */
-@media (max-width: 768px) {
-  .hero-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .hero-btn {
-    width: 100%;
-    font-size: 18px;
-    padding: 16px;
-    text-align: center;
-  }
-}
-  /* === GALERIA SCROLL === */
-.gallery-wrapper {
-  position: relative;
-}
-
-.gallery-scroll {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-
-.gallery-scroll::-webkit-scrollbar {
-    display: none;
-}
-
-.gallery-scroll img {
-  height: 220px;
-  flex-shrink: 0;
-  border-radius: 10px;
-}
-
-.gallery-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #000;
-  color: #fff;
-  border: none;
-  font-size: 28px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  z-index: 10;
-  opacity: 0.7;
-}
-
-.gallery-arrow.left {
-  left: 0;
-}
-
-.gallery-arrow.right {
-  right: 0;
-}
-
-@media (max-width: 768px) {
-  .gallery-arrow {
-    display: none;
-  }
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-text">
-    <h1>Profesjonalne usługi remontowe<br>Łódź i okolice</h1>
-    <p>
-      Remonty mieszkań, łazienek i wnętrz pod klucz.<br>
-      Solidnie • Terminowo • Profesjonalnie
-    </p>
-    <div class="hero-buttons">
-      <a href="tel:+48787118032" class="hero-btn">📞 Zadzwoń</a>
-      <a href="https://wa.me/48787118032" class="hero-btn secondary">💬 WhatsApp</a>
-    </div>
+  <h1>Profesjonalne usługi remontowe<br>Łódź i okolice</h1>
+  <p>Remonty mieszkań, łazienek i wnętrz pod klucz.<br>
+     Solidnie • Terminowo • Profesjonalnie</p>
+
+  <div class="hero-buttons">
+    <a href="tel:+48787118032" class="btn call">Zadzwoń</a>
+    <a href="https://wa.me/48787118032" class="btn whatsapp">WhatsApp</a>
   </div>
 </section>
-<section>
-  <h2>Zakres usług</h2>
-  <div class="services">
-  <div class="services">
-  <div class="card">🏠 Kompleksowe remonty mieszkań i domów</div>
- <a class="card" href="malowanie-gladzie-szpachlowanie-lodz.html">
-  Malowanie, gładzie, szpachlowanie
-</a>
- <a class="card" href="ukladanie-plytek-lodz.html">
-  Układanie płytek (łazienki, kuchnie, tarasy)
-</a>
 
-  <div class="card">🧱 Zabudowy z płyt gipsowo-kartonowych (ścianki, sufity)</div>
-  <div class="card">🎯 Sufity podwieszane</div>
-  <div class="card">🧱 Wylewki i wylewki samopoziomujące (posadzki)</div>
-<a class="card" href="remont-lazienki-lodz.html">
-  Remonty łazienek pod klucz
-</a>
-  <div class="card">🚪 Montaż drzwi i okien</div>
-  <div class="card">🪵 Panele podłogowe i listwy</div>
-  <div class="card">⚡ Instalacje elektryczne (gniazdka, oświetlenie)</div>
-  <div class="card">🚰 Instalacje hydrauliczne (łazienki, kuchnie)</div>
-  <div class="card">🧹 Demontaż i przygotowanie do remontu</div>
-<a class="card" href="wykonczenia-wnetrz-lodz.html">
-  Prace ogólnobudowlane i wykończeniowe
-</a>
+<!-- USŁUGI -->
+<section class="section">
+<h2>Zakres usług</h2>
+
+<div class="services">
+  <div class="card">Kompleksowe remonty mieszkań i domów</div>
+  <div class="card">Malowanie, gładzie, szpachlowanie</div>
+  <div class="card">Układanie płytek (łazienki, kuchnie)</div>
+  <div class="card">Remonty łazienek pod klucz</div>
+  <div class="card">Zabudowy z płyt g-k</div>
+  <div class="card">Panele podłogowe i listwy</div>
+  <div class="card">Instalacje elektryczne</div>
+  <div class="card">Instalacje hydrauliczne</div>
+  <div class="card">Prace ogólnobudowlane i wykończeniowe</div>
 </div>
-  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="section">
+<h2>Galeria realizacji</h2>
+
+<div class="gallery">
+  <img src="images/vit-bud/IMG-0cde353a274bbb4a92d01b9c63d0ecda-V.jpg">
+  <img src="images/vit-bud/IMG-b297425eb56df9d3adb911132e0d4878-V.jpg">
+  <img src="images/vit-bud/IMG_20241022_071908.jpg">
+  <img src="images/vit-bud/IMG_20241022_071927.jpg">
+  <img src="images/vit-bud/IMG_20250215_144012.jpg">
+  <img src="images/vit-bud/IMG_20250318_134147.jpg">
+  <img src="images/vit-bud/IMG_20250318_134153.jpg">
+  <img src="images/vit-bud/IMG_20250318_134212.jpg">
+  <img src="images/vit-bud/IMG_20250515_145011.jpg">
+  <img src="images/vit-bud/IMG_20250515_145022.jpg">
+  <img src="images/vit-bud/P80810-092850.jpg">
+</div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section contact">
+<h2>Kontakt</h2>
+
+<p>📞 <a href="tel:+48787118032">+48 787 118 032</a></p>
+<p>💬 <a href="https://wa.me/48787118032">WhatsApp</a></p>
 
 </section>
- <section class="info-box">
-  <h2>Remont łazienek Łódź</h2>
 
-  <p>
-    Wykonujemy profesjonalny remont łazienek w Łodzi i okolicach.
-    Specjalizujemy się w nowoczesnych łazienkach, prysznicach walk-in,
-    układaniu płytek oraz realizacjach pod klucz.
-  </p>
-
-  <p>
-    Każdy remont łazienki realizujemy kompleksowo – od demontażu,
-    przez instalacje hydrauliczne i elektryczne, aż po wykończenie
-    i montaż armatury.
-  </p>
-
-  <ul>
-    <li>Remont łazienki pod klucz – Łódź</li>
-    <li>Prysznice walk-in</li>
-    <li>Układanie płytek</li>
-    <li>Zabudowy g-k</li>
-    <li>Instalacje hydrauliczne i elektryczne</li>
-  </ul>
-</section>
-<section class="info-box">
-  <h2>Nasze usługi remontowe w Łodzi</h2>
-
-  <p>
-    Oferujemy kompleksowe usługi remontowo-budowlane w Łodzi i okolicach.
-    Specjalizujemy się w wykończeniach mieszkań i domów, remontach łazienek
-    oraz kuchni.
-  </p>
-
-  <ul>
-    <li>Wykończenia mieszkań i domów</li>
-    <li>Remonty łazienek pod klucz</li>
-    <li>Szpachlowanie ścian i sufitów</li>
-    <li>Malowanie wnętrz</li>
-    <li>Układanie płytek</li>
-    <li>Zabudowy gipsowo-kartonowe</li>
-    <li>Instalacje hydrauliczne i elektryczne</li>
-  </ul>
-</section>
-<section>
-  <h2>Galeria realizacji</h2>
-
-  <div class="gallery-wrapper">
-    <button class="gallery-arrow left" onclick="prevPhoto()">‹</button>
-
-    <div class="gallery-scroll">
-      <img src="images/vit-bud/IMG_20241022_071908.jpg" onclick="openGallery(0)">
-      <img src="images/vit-bud/IMG_20241022_071927.jpg" onclick="openGallery(1)">
-      <img src="images/vit-bud/IMG_20250215_144012.jpg" onclick="openGallery(2)">
-      <img src="images/vit-bud/IMG_20250318_134147.jpg" onclick="openGallery(3)">
-      <img src="images/vit-bud/IMG_20250318_134153.jpg" onclick="openGallery(4)">
-      <img src="images/vit-bud/IMG_20250318_134212.jpg" onclick="openGallery(5)">
-      <img src="images/vit-bud/IMG_20250515_145011.jpg" onclick="openGallery(6)">
-      <img src="images/vit-bud/IMG_20250515_145022.jpg" onclick="openGallery(7)">
-    </div>
-
-    <button class="gallery-arrow right" onclick="nextPhoto()">›</button>
-  </div>
-</section>
-<section>
-  <h2>Formularz kontaktowy</h2>
-  <form>
-    <input type="text" placeholder="Imię" required>
-    <input type="tel" placeholder="Telefon" required>
-    <textarea rows="4" placeholder="Wiadomość"></textarea>
-    <button>Wyślij zapytanie</button>
-  </form>
-</section>
-<section class="seo-block">
-  <h2>Usługi remontowe Łódź</h2>
-
-  <p>
-    Oferujemy profesjonalne usługi remontowo-budowlane w Łodzi i okolicach.
-    Specjalizujemy się w kompleksowych wykończeniach wnętrz mieszkań i domów.
-  </p>
-
-</section>
 <footer>
-  © 2026 Usługi remontowo-budowlane – Vitalii Tychkovskyi | Tel: +48 787 118 032
+© Vit-Bud – Usługi remontowe Łódź
 </footer>
 
-</script>
 </body>
 </html>
