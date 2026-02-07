@@ -132,7 +132,7 @@ h2 {
   margin-top: 12px;
   padding-left: 20px;
 }
-.services, .gallery {
+.services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -266,6 +266,11 @@ footer {
   gap: 16px;
   overflow-x: auto;
   scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+    display: none;
 }
 
 .gallery-scroll img {
@@ -437,38 +442,7 @@ footer {
 <footer>
   © 2026 Usługi remontowo-budowlane – Vitalii Tychkovskyi | Tel: +48 787 118 032
 </footer>
-<!-- Окно для увеличения фото -->
-<div id="lightbox">
-  <span class="lightbox-arrow left" onclick="prevImage()">❮</span>
 
-  <img id="lightbox-img">
-
-  <span class="lightbox-arrow right" onclick="nextImage()">❯</span>
-</div>
-
-<script>
-const images = document.querySelectorAll("#gallery img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-
-images.forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
-  });
-});
-
-lightbox.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-
-function scrollGallery(direction) {
-  const gallery = document.getElementById("gallery");
-  gallery.scrollBy({
-    left: direction * 320,
-    behavior: "smooth"
-  });
-}
 </script>
 </body>
 </html>
