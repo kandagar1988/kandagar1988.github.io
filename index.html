@@ -190,6 +190,57 @@ footer {
   padding: 20px;
   font-size: 14px;
 }
+  .hero {
+  background: linear-gradient(120deg, #111827, #1f2933);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  background: #22c55e;
+  color: #000;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.hero-btn.secondary {
+  background: #3b82f6;
+  color: #fff;
+}
+
+/* 📱 TELEFON */
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 16px;
+  }
+  .hero h1 {
+    font-size: 24px;
+  }
+  .hero p {
+    font-size: 15px;
+  }
+}
 </style>
 </head>
 
@@ -220,7 +271,19 @@ footer {
    <a class="secondary" href="https://wa.me/48787118032?text=Dzień%20dobry,%20chciałbym%20wycenić%20remont" target="_blank">💬 WhatsApp</a>
   </div>
 </header>
-
+<section class="hero">
+  <div class="hero-text">
+    <h1>Profesjonalne usługi remontowe<br>Łódź i okolice</h1>
+    <p>
+      Remonty mieszkań, łazienek i wnętrz pod klucz.<br>
+      Solidnie • Terminowo • Profesjonalnie
+    </p>
+    <div class="hero-buttons">
+      <a href="tel:+48787118032" class="hero-btn">📞 Zadzwoń</a>
+      <a href="https://wa.me/48787118032" class="hero-btn secondary">💬 WhatsApp</a>
+    </div>
+  </div>
+</section>
 <section>
   <h2>Zakres usług</h2>
   <div class="services">
