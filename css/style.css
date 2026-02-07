@@ -216,4 +216,40 @@ footer {
     font-size: 14px;
   }
 }
+/* ===== BIG SERVICES like Projektorama ===== */
 
+.services {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 30px !important;
+}
+
+.services div {
+  background: #ffffff !important;
+  padding: 40px 30px !important;
+  border-radius: 18px !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  min-height: 140px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.services div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .services div {
+    font-size: 17px !important;
+    padding: 32px 24px !important;
+  }
+}
