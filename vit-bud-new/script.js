@@ -1,4 +1,4 @@
-1 function openImg(src) {
+1 console.log("script loaded");
 2   const modal = document.getElementById("imgModal");
 3   const img = document.getElementById("imgBig");
 4
