@@ -76,6 +76,28 @@ header p {
   border-radius: 6px;
   font-weight: bold;
 }
+a.card {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+a.card:visited {
+  color: #000;
+}
+
+a.card:hover {
+  color: #000;
+}
+.card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
 
 .buttons a.secondary {
   background: #3b82f6;
