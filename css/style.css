@@ -253,3 +253,41 @@ footer {
     padding: 32px 24px !important;
   }
 }
+/* ===== HEADER BIG like Projektoramy ===== */
+
+.top-header {
+  height: 90px !important;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+/* ЛОГОТИП */
+.logo {
+  font-size: 28px !important;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* МЕНЮ */
+.main-nav a {
+  font-size: 18px !important;
+  font-weight: 600;
+  padding: 8px 4px;
+}
+
+/* КНОПКА СПРАВА */
+.header-btn {
+  font-size: 16px;
+  padding: 12px 20px;
+}
+
+/* Чтобы контент не залезал под header */
+.hero {
+  padding-top: 120px !important;
+}
