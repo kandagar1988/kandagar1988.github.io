@@ -289,8 +289,13 @@ footer {
   opacity: 0.7;
 }
 
-.gallery-arrow.left { left: 0; }
-.gallery-arrow.right { right: 0; }
+.gallery-arrow.left {
+  left: 0;
+}
+
+.gallery-arrow.right {
+  right: 0;
+}
 
 @media (max-width: 768px) {
   .gallery-arrow {
@@ -433,19 +438,12 @@ footer {
   © 2026 Usługi remontowo-budowlane – Vitalii Tychkovskyi | Tel: +48 787 118 032
 </footer>
 <!-- Окно для увеличения фото -->
-<div id="lightbox" style="
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.9);
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-">
-  <img id="lightbox-img" style="max-width:95%; max-height:95%; border-radius:10px;">
+<div id="lightbox">
+  <span class="lightbox-arrow left" onclick="prevImage()">❮</span>
+
+  <img id="lightbox-img">
+
+  <span class="lightbox-arrow right" onclick="nextImage()">❯</span>
 </div>
 
 <script>
