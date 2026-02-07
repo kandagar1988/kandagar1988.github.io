@@ -155,9 +155,66 @@ h2 {
   text-align: center;
 }
 
-.gallery img {
-  width: 100%;
-  border-radius: 8px;
+/* ===== GALERIA HORYZONTALNA (jak Projektorama) ===== */
+
+.gallery-wrapper {
+    position: relative;
+    margin: 40px 0;
+}
+
+.gallery-scroll {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+}
+
+.gallery-scroll img {
+    height: 220px;
+    width: auto;
+    border-radius: 14px;
+    object-fit: cover;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.gallery-scroll img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    font-size: 26px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.gallery-arrow.left {
+    left: -20px;
+}
+
+.gallery-arrow.right {
+    right: -20px;
+}
+
+@media (max-width: 768px) {
+    .gallery-arrow {
+        display: none;
+    }
+
+    .gallery-scroll img {
+        height: 180px;
+    }
 }
 
 form {
