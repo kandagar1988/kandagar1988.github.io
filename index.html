@@ -458,68 +458,22 @@ footer {
   <h2>Galeria realizacji</h2>
 
   <div class="gallery-wrapper">
-    <button class="gallery-arrow left" onclick="scrollGallery(-1)">‹</button>
+    <button class="gallery-arrow left" onclick="prevPhoto()">‹</button>
 
-   <div class="gallery-wrapper">
+    <div class="gallery-scroll">
+      <img src="images/vit-bud/IMG_20241022_071908.jpg" onclick="openGallery(0)">
+      <img src="images/vit-bud/IMG_20241022_071927.jpg" onclick="openGallery(1)">
+      <img src="images/vit-bud/IMG_20250215_144012.jpg" onclick="openGallery(2)">
+      <img src="images/vit-bud/IMG_20250318_134147.jpg" onclick="openGallery(3)">
+      <img src="images/vit-bud/IMG_20250318_134153.jpg" onclick="openGallery(4)">
+      <img src="images/vit-bud/IMG_20250318_134212.jpg" onclick="openGallery(5)">
+      <img src="images/vit-bud/IMG_20250515_145011.jpg" onclick="openGallery(6)">
+      <img src="images/vit-bud/IMG_20250515_145022.jpg" onclick="openGallery(7)">
+    </div>
 
-  <button class="gallery-arrow left" onclick="scrollGallery(-1)">‹</button>
-
-  <div class="gallery-scroll" id="gallery">
-
-    <a href="images/vit-bud/IMG-0cde353a274bbb4a92d01b9c63d0ecda-V.jpg" target="_blank">
-      <img src="images/vit-bud/IMG-0cde353a274bbb4a92d01b9c63d0ecda-V.jpg">
-    </a>
-
-    <a href="images/vit-bud/IMG-b297425eb56df9d3adb911132e0d4878-V.jpg" target="_blank">
-      <img src="images/vit-bud/IMG-b297425eb56df9d3adb911132e0d4878-V.jpg">
-    </a>
-
-    <a href="images/vit-bud/IMG_20241022_071908.jpg" target="_blank">
-      <img src="images/vit-bud/IMG_20241022_071908.jpg">
-    </a>
-
-    <a href="images/vit-bud/IMG_20241022_071927.jpg" target="_blank">
-      <img src="images/vit-bud/IMG_20241022_071927.jpg">
-    </a>
-
-    <a href="images/vit-bud/IMG_20250215_144012.jpg" target="_blank">
-      <img src="images/vit-bud/IMG_20250215_144012.jpg">
-    </a>
-
-    <a href="images/vit-bud/IMG_20250318_134147.jpg" target="_blank">
-      <img src="images/vit-bud/IMG_20250318_134147.jpg">
-    </a>
-
-    <a href="images/vit-bud/IMG_20250318_134153.jpg" target="_blank">
-      <img src="images/vit-bud/IMG_20250318_134153.jpg">
-    </a>
-
-    <a href="images/vit-bud/IMG_20250318_134212.jpg" target="_blank">
-      <img src="images/vit-bud/IMG_20250318_134212.jpg">
-    </a>
-
-    <a href="images/vit-bud/IMG_20250515_145011.jpg" target="_blank">
-      <img src="images/vit-bud/IMG_20250515_145011.jpg">
-    </a>
-
-    <a href="images/vit-bud/IMG_20250515_145022.jpg" target="_blank">
-      <img src="images/vit-bud/IMG_20250515_145022.jpg">
-    </a>
-
-    <a href="images/vit-bud/P80810-092850.jpg" target="_blank">
-      <img src="images/vit-bud/P80810-092850.jpg">
-    </a>
-
-  </div>
-
-  <button class="gallery-arrow right" onclick="scrollGallery(1)">›</button>
-
-</div>
-
-    <button class="gallery-arrow right" onclick="scrollGallery(1)">›</button>
+    <button class="gallery-arrow right" onclick="nextPhoto()">›</button>
   </div>
 </section>
-
 <section>
   <h2>Formularz kontaktowy</h2>
   <form>
