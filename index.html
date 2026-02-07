@@ -242,6 +242,61 @@ footer {
     font-size: 15px;
   }
 }
+  /* === MOBILE HERO BUTTONS === */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    font-size: 18px;
+    padding: 16px;
+    text-align: center;
+  }
+}
+  /* === GALERIA SCROLL === */
+.gallery-wrapper {
+  position: relative;
+}
+
+.gallery-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.gallery-scroll img {
+  height: 220px;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.7;
+}
+
+.gallery-arrow.left { left: 0; }
+.gallery-arrow.right { right: 0; }
+
+@media (max-width: 768px) {
+  .gallery-arrow {
+    display: none;
+  }
+}
 </style>
 </head>
 
@@ -334,18 +389,25 @@ footer {
 </section>
 <section>
   <h2>Galeria realizacji</h2>
-  <div class="gallery">
- <img src="images/vit-bud/IMG-0cde353a274bbb4a92d01b9c63d0ecda-V.jpg">
-<img src="images/vit-bud/IMG-b297425eb56df9d3adb911132e0d4878-V.jpg">
-<img src="images/vit-bud/IMG_20241022_071908.jpg">
-<img src="images/vit-bud/IMG_20241022_071927.jpg">
-<img src="images/vit-bud/IMG_20250215_144012.jpg">
-<img src="images/vit-bud/IMG_20250318_134147.jpg">
-<img src="images/vit-bud/IMG_20250318_134153.jpg">
-<img src="images/vit-bud/IMG_20250318_134212.jpg">
-<img src="images/vit-bud/IMG_20250515_145011.jpg">
-<img src="images/vit-bud/IMG_20250515_145022.jpg">
-<img src="images/vit-bud/P80810-092850.jpg">
+
+  <div class="gallery-wrapper">
+    <button class="gallery-arrow left" onclick="scrollGallery(-1)">‹</button>
+
+    <div class="gallery-scroll" id="gallery">
+      <img src="images/vit-bud/IMG-0cde353a274bbb4a92d01b9c63d0ecda-V.jpg">
+      <img src="images/vit-bud/IMG-b297425eb56df9d3adb911132e0d4878-V.jpg">
+      <img src="images/vit-bud/IMG_20241022_071908.jpg">
+      <img src="images/vit-bud/IMG_20241022_071927.jpg">
+      <img src="images/vit-bud/IMG_20250215_144012.jpg">
+      <img src="images/vit-bud/IMG_20250318_134147.jpg">
+      <img src="images/vit-bud/IMG_20250318_134153.jpg">
+      <img src="images/vit-bud/IMG_20250318_134212.jpg">
+      <img src="images/vit-bud/IMG_20250515_145011.jpg">
+      <img src="images/vit-bud/IMG_20250515_145022.jpg">
+      <img src="images/vit-bud/P80810-092850.jpg">
+    </div>
+
+    <button class="gallery-arrow right" onclick="scrollGallery(1)">›</button>
   </div>
 </section>
 
