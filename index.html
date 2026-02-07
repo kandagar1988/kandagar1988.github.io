@@ -136,7 +136,17 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
+/* Анимация появления */
+.info-box {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
 
+.info-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .card {
   background: white;
   padding: 20px;
@@ -352,6 +362,18 @@ footer {
   lightbox.addEventListener("click", () => {
     lightbox.style.display = "none";
   });
+  // Анимация блоков info-box при скролле
+const boxes = document.querySelectorAll('.info-box');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+boxes.forEach(box => observer.observe(box));
 </script>
 </body>
 </html>
