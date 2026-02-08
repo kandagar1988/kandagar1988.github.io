@@ -469,7 +469,65 @@ footer {
   #menuOverlay.active {
     display: block;
   }
+/* ===== DESKTOP HEADER (Projektorama style) ===== */
 
+.header {
+  background: #0f172a;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.desktop-nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.desktop-nav a:hover {
+  color: #38bdf8;
+}
+
+.header-btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .desktop-nav,
+  .header-btn {
+    display: none;
+  }
+}
   .menu-toggle {
     display: block;
   }
