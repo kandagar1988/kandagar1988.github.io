@@ -166,5 +166,14 @@
 </footer>
 
 <script src="js/gallery.js"></script>
+ <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  toggle.addEventListener('click', () => {
+    mobileMenu.style.display =
+      mobileMenu.style.display === 'block' ? 'none' : 'block';
+  });
+</script> 
 </body>
 </html>
