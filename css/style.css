@@ -243,10 +243,10 @@ footer {
 /* === PROJECTORAMA HORIZONTAL SLIDER === */
 
 .slider {
-    position: relative;
-    overflow: hidden;
-    max-width: 1200px;
-    margin: 0 auto;
+  position: relative;
+  overflow: visible;   /* 🔥 ОБЯЗАТЕЛЬНО */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .slider-track {
@@ -293,9 +293,6 @@ footer {
         width: 38px;
         height: 38px;
     }
-}
-.slider {
-  position: relative;
 }
 
 .slider-track {
