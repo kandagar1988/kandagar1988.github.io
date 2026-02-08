@@ -450,3 +450,27 @@ footer {
   text-decoration: none;
   font-weight: 600;
 }
+/* === MOBILE ONLY MENU === */
+
+#sideMenu,
+#menuOverlay {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #sideMenu {
+    display: flex;
+  }
+
+  #menuOverlay.active {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
