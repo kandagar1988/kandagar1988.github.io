@@ -307,23 +307,6 @@ footer {
   z-index: 998;
 }
 
-#sideMenu {
-  position: fixed;
-  top: 0;
-  right: -85%;
-  width: 85%;
-  height: 100%;
-  background: #fff;
-  z-index: 999;
-  transition: right .3s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-#sideMenu.active {
-  right: 0;
-}
-
 #menuOverlay.active {
   display: block;
 }
@@ -393,18 +376,6 @@ footer {
   right: 0;
 }
 /* ===== MOBILE SIDE MENU (PROJECTORAMA STYLE) ===== */
-
-#menuOverlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 998;
-  display: none;
-}
-
-#menuOverlay.active {
-  display: block;
-}
 
 #sideMenu {
   position: fixed;
