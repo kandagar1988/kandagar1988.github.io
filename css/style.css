@@ -223,3 +223,37 @@ footer {
     height: 180px;
   }
 }
+/* SERVICES – normalny wygląd kart */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.service-item {
+  display: block;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #111;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.service-item h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #111;
+}
+
+.service-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
