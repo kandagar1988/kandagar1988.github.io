@@ -484,4 +484,37 @@ footer {
     display: block;
   }
 }
+/* ============================= */
+/* DESKTOP (НОУТ / ПК) */
+/* ============================= */
+@media (min-width: 1024px) {
+  .desktop-nav {
+    display: flex;
+    gap: 24px;
+  }
 
+  .header-btn {
+    display: inline-block;
+  }
+
+  /* скрываем мобильное */
+  #sideMenu,
+  #menuOverlay,
+  .menu-toggle {
+    display: none !important;
+  }
+}
+
+/* ============================= */
+/* MOBILE (ТЕЛЕФОН) */
+/* ============================= */
+@media (max-width: 1023px) {
+  .desktop-nav,
+  .header-btn {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
