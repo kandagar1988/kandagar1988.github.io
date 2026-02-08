@@ -229,5 +229,18 @@ closeBtn.onclick = overlay.onclick = () => {
   </nav>
 
 </div>
+  <script>
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeMenu = document.getElementById('closeMenu');
+
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.add('open');
+  });
+
+  closeMenu.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+  });
+</script>
 </body>
 </html>
