@@ -450,26 +450,9 @@ footer {
   text-decoration: none;
   font-weight: 600;
 }
-/* === MOBILE ONLY MENU === */
-
-#sideMenu,
-#menuOverlay {
-  display: none;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  #sideMenu {
-    display: flex;
-  }
-
-  #menuOverlay.active {
-    display: block;
-  }
-/* ===== DESKTOP HEADER FIX ===== */
+/* ============================= */
+/* DESKTOP (НОУТ / ПК) */
+/* ============================= */
 @media (min-width: 1024px) {
   .desktop-nav {
     display: flex;
@@ -480,9 +463,25 @@ footer {
     display: inline-block;
   }
 
+  /* скрываем мобильное */
   #sideMenu,
   #menuOverlay,
   .menu-toggle {
     display: none !important;
   }
 }
+
+/* ============================= */
+/* MOBILE (ТЕЛЕФОН) */
+/* ============================= */
+@media (max-width: 1023px) {
+  .desktop-nav,
+  .header-btn {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
