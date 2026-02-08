@@ -436,3 +436,16 @@ body {
     height: 180px;
   }
 }
+/* ===== FINAL HEADER FIX (DESKTOP + MOBILE) ===== */
+
+/* отступ для всего сайта под фиксированный header */
+body {
+  padding-top: 120px;
+}
+
+/* если header выше на ПК */
+@media (min-width: 1024px) {
+  body {
+    padding-top: 140px;
+  }
+}
