@@ -242,71 +242,40 @@ footer {
 }
 /* === PROJECTORAMA HORIZONTAL SLIDER === */
 
-.slider {
-    position: relative;
-    overflow: visible;   /* ✅ ОБЯЗАТЕЛЬНО */
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/* ===== SIMPLE HORIZONTAL GALLERY (PC + MOBILE) ===== */
 
-.slider-track img {
-    pointer-events: auto;
-}
-
-.slider-track img {
-  pointer-events: auto;   /* ✅ картинки снова кликабельны */
-}
-.slider-track img {
-    width: 360px;
-    height: 360px;
-    object-fit: cover;
-    border-radius: 14px;
-    flex-shrink: 0;
-}
-
-/* MOBILE — ТОЖЕ ГОРИЗОНТАЛЬНО */
-@media (max-width: 768px) {
-    .slider-track img {
-        width: 85vw;
-        height: 85vw;
-    }
-}
-  .nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  border: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 30;          /* ВАЖНО */
-  pointer-events: auto; /* ВАЖНО */
-}
-
-.nav.prev { left: 10px; }
-.nav.next { right: 10px; }
-
-@media (max-width: 768px) {
-    .nav {
-        width: 38px;
-        height: 38px;
-    }
-}
-
-.slider-track {
+.gallery {
   display: flex;
-  gap: 30px;
-  transition: transform 0.4s ease;
-  pointer-events: none; /* 🔥 ВАЖНО */
+  gap: 24px;
+  overflow-x: auto;
+  padding: 20px 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-.nav.prev {
-  left: 10px;
+.gallery::-webkit-scrollbar {
+  height: 6px;
 }
 
-.nav.next {
-  right: 10px;
+.gallery::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border-radius: 10px;
 }
+
+.gallery img {
+  flex: 0 0 auto;
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+  scroll-snap-align: start;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .gallery img {
+    width: 85vw;
+    height: 85vw;
+  }
+}
+
