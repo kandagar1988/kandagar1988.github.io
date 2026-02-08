@@ -244,18 +244,18 @@ footer {
 
 .slider {
   position: relative;
-  overflow: visible;   /* 🔥 ОБЯЗАТЕЛЬНО */
+  overflow: hidden;   /* ✅ ОБЯЗАТЕЛЬНО */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .slider-track {
-  display: flex;
-  gap: 30px;
-  transition: transform 0.4s ease;
-  pointer-events: none; /* 🔥 ВАЖНО */
+  pointer-events: none;   /* трек не ловит клики */
 }
 
+.slider-track img {
+  pointer-events: auto;   /* ✅ картинки снова кликабельны */
+}
 .slider-track img {
     width: 360px;
     height: 360px;
@@ -272,17 +272,19 @@ footer {
     }
 }
 .nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    border: none;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
+  .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 30;          /* ВАЖНО */
+  pointer-events: auto; /* ВАЖНО */
 }
 
 .nav.prev { left: 10px; }
