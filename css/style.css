@@ -241,4 +241,35 @@ footer {
   }
 }
 /* === PROJECTORAMA HORIZONTAL SLIDER === */
+/* === PROJECTORAMA STYLE GALLERY === */
 
+.gallery-section {
+  margin: 60px auto;
+  max-width: 1200px;
+}
+
+.gallery-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 20px;
+}
+
+.gallery-track img {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+/* === MOBILE === */
+@media (max-width: 768px) {
+  .gallery-track img {
+    width: 85vw;
+    height: 85vw;
+  }
+}
