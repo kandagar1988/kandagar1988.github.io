@@ -1,70 +1,41 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vit-Bud – Usługi remontowe Łódź</title>
-  <meta name="description" content="Profesjonalne usługi remontowo-budowlane w Łodzi i okolicach. Remonty mieszkań, łazienek, wykończenia wnętrz. Zadzwoń teraz." />
-
+  <meta name="description" content="Profesjonalne usługi remontowe w Łodzi i okolicach. Remonty mieszkań, łazienek i wnętrz pod klucz.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <div id="top"></div>
-  <!-- HEADER -->
+
+<!-- HEADER -->
 <header class="top-header">
   <div class="header-container">
-
     <a href="index.html" class="logo">Vit-Bud</a>
 
     <nav class="main-nav">
-      <a href="index.html">Strona główna</a>
-      <a href="onas.html">O nas</a>
-      <a href="uslugi.html">Usługi</a>
-      <a href="realizacje.html">Realizacje</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="#top">Strona główna</a>
+      <a href="#uslugi">Usługi</a>
+      <a href="#gallery">Realizacje</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
 
-    <a href="realizacje.html" class="header-btn">
-      Więcej realizacji
-    </a>
-
-    <!-- кнопка меню для mobile -->
+    <a href="#gallery" class="header-btn">Więcej realizacji</a>
     <button class="menu-toggle">☰</button>
-
   </div>
 </header>
-<!-- END HEADER -->
-<!-- 🔽 ВСТАВЛЯЕМ HEADER ЗДЕСЬ -->
-<header class="top-header">
-  <div class="header-container">
 
-    <a href="/" class="logo">
-      Vit-Bud
-    </a>
+<div id="top"></div>
 
-   <nav class="main-nav">
-  <a href="#top">Strona główna</a>
- <a href="onas.html">O nas</a>
-
-  <a href="#uslugi">Usługi</a>
-  <a href="#gallery">Realizacje</a>
-  <a href="#kontakt">Kontakt</a>
-</nav
-
-    <a href="#gallery" class="header-btn">
-      Więcej realizacji
-    </a>
-
-  </div>
-</header>
-<!-- 🔼 КОНЕЦ HEADER --
 <!-- HERO -->
 <section class="hero">
   <h1>Profesjonalne usługi remontowe<br>Łódź i okolice</h1>
-  <p>Remonty mieszkań, łazienek i wnętrz pod klucz<br>
-     Solidnie • Terminowo • Profesjonalnie</p>
+  <p>
+    Remonty mieszkań, łazienek i wnętrz pod klucz<br>
+    Solidnie • Terminowo • Profesjonalnie
+  </p>
 
   <div class="hero-buttons">
     <a href="tel:+48787118032" class="btn call">Zadzwoń</a>
@@ -77,14 +48,11 @@
   <h2>Zakres usług</h2>
 
   <div class="services">
-  <div class="service-card">
-  <img src="images/vit-bud/IMG_20241022_071908.jpg" alt="Kompleksowe remonty mieszkań i domów">
-  <h3>Kompleksowe remonty mieszkań i domów</h3>
-</div
+    <div class="card">Kompleksowe remonty mieszkań i domów</div>
     <div class="card">Malowanie, gładzie, szpachlowanie</div>
     <div class="card">Układanie płytek (łazienki, kuchnie)</div>
     <div class="card">Remonty łazienek pod klucz</div>
-    <div class="card">Zabudowy z płyt g-k</div>
+    <div class="card">Zabudowy z płyt G-K</div>
     <div class="card">Panele podłogowe i listwy</div>
     <div class="card">Instalacje elektryczne</div>
     <div class="card">Instalacje hydrauliczne</div>
@@ -93,22 +61,22 @@
 </section>
 
 <!-- GALERIA -->
-<section class="gallery-section">
+<section class="gallery-section" id="gallery">
   <h2>Galeria realizacji</h2>
 
   <div class="slider">
     <button class="nav prev">&#10094;</button>
 
     <div class="slider-track">
-      <img src="images/vit-bud/IMG_20241022_071908.jpg" loading="lazy" alt="Wykończenie wnętrz Łódź">
-      <img src="images/vit-bud/IMG_20241022_071927.jpg" loading="lazy" alt="Remont łazienki Łódź">
-      <img src="images/vit-bud/IMG_20250215_144012.jpg" loading="lazy" alt="Układanie płytek Łódź">
-      <img src="images/vit-bud/IMG_20250318_134147.jpg" loading="lazy" alt="Wykończenie łazienki">
-      <img src="images/vit-bud/IMG_20250318_134153.jpg" loading="lazy" alt="Remont wnętrz">
-      <img src="images/vit-bud/IMG_20250318_134212.jpg" loading="lazy" alt="Płytki łazienkowe">
-      <img src="images/vit-bud/IMG_20250515_145011.jpg" loading="lazy" alt="Prace wykończeniowe">
-      <img src="images/vit-bud/IMG_20250515_145022.jpg" loading="lazy" alt="Remont mieszkania">
-      <img src="images/vit-bud/P80810-092850.jpg" loading="lazy" alt="Realizacja Vit-Bud">
+      <img src="images/vit-bud/IMG_20241022_071908.jpg" alt="">
+      <img src="images/vit-bud/IMG_20241022_071927.jpg" alt="">
+      <img src="images/vit-bud/IMG_20250215_144012.jpg" alt="">
+      <img src="images/vit-bud/IMG_20250318_134147.jpg" alt="">
+      <img src="images/vit-bud/IMG_20250318_134153.jpg" alt="">
+      <img src="images/vit-bud/IMG_20250318_134212.jpg" alt="">
+      <img src="images/vit-bud/IMG_20250515_145011.jpg" alt="">
+      <img src="images/vit-bud/IMG_20250515_145022.jpg" alt="">
+      <img src="images/vit-bud/P80810-092850.jpg" alt="">
     </div>
 
     <button class="nav next">&#10095;</button>
@@ -116,7 +84,7 @@
 </section>
 
 <!-- KONTAKT -->
-<section class="section contact">
+<section class="section contact" id="kontakt">
   <h2>Kontakt</h2>
   <p>📞 <a href="tel:+48787118032">+48 787 118 032</a></p>
   <p>💬 <a href="https://wa.me/48787118032">WhatsApp</a></p>
@@ -126,8 +94,6 @@
   © Vit-Bud – Usługi remontowe Łódź
 </footer>
 
-<!-- JS (WAŻNE: na samym dole) -->
 <script src="js/gallery.js"></script>
-
 </body>
 </html>
