@@ -1,1 +1,246 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0f172a;
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Desktop nav */
+.desktop-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.desktop-nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.desktop-nav a:hover {
+  color: #fff;
+}
+
+/* Header button */
+.header-btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ===== MOBILE TOGGLE ===== */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+  margin-top: 80px;
+  background: linear-gradient(135deg, #020617, #1e293b);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 14px 22px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn.call {
+  background: #22c55e;
+}
+
+.btn.whatsapp {
+  background: #3b82f6;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* ===== SERVICES ===== */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.service-item {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #111;
+}
+
+.service-item h3 {
+  margin-bottom: 10px;
+}
+
+/* ===== GALLERY ===== */
+.gallery-section img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ===== CONTACT ===== */
+footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== MOBILE SIDE MENU ===== */
+#menuOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+#menuOverlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#sideMenu {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 320px;
+  height: 100%;
+  background: #0f172a;
+  color: #fff;
+  transition: 0.3s;
+  z-index: 1000;
+  padding: 20px;
+}
+
+#sideMenu.active {
+  left: 0;
+}
+
+.side-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.side-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#closeMenu {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.side-nav a {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.side-nav a:hover {
+  color: #fff;
+}
+
+.side-contact {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.side-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #22c55e;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1023px) {
+  .desktop-nav,
+  .header-btn {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
