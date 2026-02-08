@@ -250,9 +250,10 @@ footer {
 }
 
 .slider-track {
-    display: flex;
-    gap: 30px;
-    transition: transform 0.4s ease;
+  display: flex;
+  gap: 30px;
+  transition: transform 0.4s ease;
+  pointer-events: none; /* 🔥 ВАЖНО */
 }
 
 .slider-track img {
@@ -297,19 +298,11 @@ footer {
   position: relative;
 }
 
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  border: none;
-  font-size: 32px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
+.slider-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.4s ease;
+  pointer-events: none; /* 🔥 ВАЖНО */
 }
 
 .nav.prev {
