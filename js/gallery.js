@@ -1,23 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".slider-track");
-  const slides = document.querySelectorAll(".slider-track img");
-  const prev = document.querySelector(".nav.prev");
-  const next = document.querySelector(".nav.next");
+  const prev = document.querySelector(".slider-btn.prev");
+  const next = document.querySelector(".slider-btn.next");
 
-  if (!track || slides.length === 0 || !prev || !next) {
-    console.error("Slider elements not found");
-    return;
-  }
+  if (!track || !prev || !next) return;
+
+  const images = track.querySelectorAll("img");
+  const gap = 30;
 
   let index = 0;
 
+  function getImageWidth() {
+    return images[0].getBoundingClientRect().width + gap;
+  }
+
   function updateSlider() {
-    const slideWidth = slides[0].offsetWidth + 20;
-    track.style.transform = `translateX(${-index * slideWidth}px)`;
+    track.style.transform = `translateX(-${index * getImageWidth()}px)`;
   }
 
   next.addEventListener("click", () => {
-    if (index < slides.length - 1) {
+    if (index < images.length - 1) {
       index++;
       updateSlider();
     }
@@ -30,47 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 🔍 увеличение фото
-  const overlay = document.createElement("div");
-  overlay.style.position = "fixed";
-  overlay.style.top = "0";
-  overlay.style.left = "0";
-  overlay.style.width = "100%";
-  overlay.style.height = "100%";
-  overlay.style.background = "rgba(0,0,0,0.9)";
-  overlay.style.display = "none";
-  overlay.style.alignItems = "center";
-  overlay.style.justifyContent = "center";
-  overlay.style.zIndex = "9999";
+  // свайп для мобилки
+  let startX = 0;
 
-  const bigImg = document.createElement("img");
-  bigImg.style.maxWidth = "90%";
-  bigImg.style.maxHeight = "90%";
-  bigImg.style.borderRadius = "12px";
-
-  overlay.appendChild(bigImg);
-  document.body.appendChild(overlay);
-
-  slides.forEach(img => {
-    img.style.cursor = "pointer";
-    img.addEventListener("click", () => {
-      bigImg.src = img.src;
-      overlay.style.display = "flex";
-    });
+  track.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
   });
 
-  overlay.addEventListener("click", () => {
-    overlay.style.display = "none";
+  track.addEventListener("touchend", e => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50 && index < images.length - 1) {
+      index++;
+    } else if (endX - startX > 50 && index > 0) {
+      index--;
+    }
+    updateSlider();
   });
-
-  window.addEventListener("resize", updateSlider);
 });
-// mobile menu
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.main-nav');
-
-if (toggle && nav) {
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-}
