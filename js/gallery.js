@@ -1,40 +1,111 @@
-const track = document.querySelector('.slider-track');
-const slides = document.querySelectorAll('.slider-track img');
-const prevBtn = document.querySelector('.nav.prev');
-const nextBtn = document.querySelector('.nav.next');
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.slider-track');
+  const slides = Array.from(track.querySelectorAll('img'));
+  const prevBtn = document.querySelector('.nav.prev');
+  const nextBtn = document.querySelector('.nav.next');
+  const dotsWrap = document.querySelector('.dots');
 
-let index = 0;
-let slideWidth = slides[0].offsetWidth + 30;
+  if (!track || slides.length === 0) return;
 
-function updateSlider() {
-  track.style.transform = `translateX(-${index * slideWidth}px)`;
-}
+  let index = 1;
+  let slideWidth = slides[0].offsetWidth + 30;
+  let timer;
 
-nextBtn.addEventListener('click', () => {
-  if (index < slides.length - 1) index++;
-  updateSlider();
-});
+  // ==== CLONES ====
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[slides.length - 1].cloneNode(true);
+  track.appendChild(firstClone);
+  track.insertBefore(lastClone, slides[0]);
 
-prevBtn.addEventListener('click', () => {
-  if (index > 0) index--;
-  updateSlider();
-});
+  let allSlides = Array.from(track.children);
 
-/* SWIPE */
-let startX = 0;
+  function updateSize() {
+    slideWidth = allSlides[0].offsetWidth + 30;
+    track.style.transition = 'none';
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
 
-track.addEventListener('touchstart', e => {
-  startX = e.touches[0].clientX;
-});
+  window.addEventListener('resize', updateSize);
+  updateSize();
 
-track.addEventListener('touchend', e => {
-  let endX = e.changedTouches[0].clientX;
-  if (startX - endX > 50 && index < slides.length - 1) index++;
-  if (endX - startX > 50 && index > 0) index--;
-  updateSlider();
-});
+  // ==== DOTS ====
+  dotsWrap.innerHTML = '';
+  const dots = slides.map((_, i) => {
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    dotsWrap.appendChild(dot);
 
-window.addEventListener('resize', () => {
-  slideWidth = slides[0].offsetWidth + 30;
-  updateSlider();
+    dot.addEventListener('click', () => {
+      index = i + 1;
+      move();
+      resetAuto();
+    });
+
+    return dot;
+  });
+
+  function updateDots() {
+    dots.forEach(d => d.classList.remove('active'));
+    dots[(index - 1) % dots.length]?.classList.add('active');
+  }
+
+  // ==== MOVE ====
+  function move(animate = true) {
+    track.style.transition = animate ? 'transform 0.4s ease' : 'none';
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+    updateDots();
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index++;
+    move();
+    resetAuto();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index--;
+    move();
+    resetAuto();
+  });
+
+  track.addEventListener('transitionend', () => {
+    if (allSlides[index] === firstClone) {
+      index = 1;
+      move(false);
+    }
+    if (allSlides[index] === lastClone) {
+      index = allSlides.length - 2;
+      move(false);
+    }
+  });
+
+  // ==== SWIPE ====
+  let startX = 0;
+
+  track.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  track.addEventListener('touchend', e => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) index++;
+    if (endX - startX > 50) index--;
+    move();
+    resetAuto();
+  });
+
+  // ==== AUTOPLAY ====
+  function autoPlay() {
+    timer = setInterval(() => {
+      index++;
+      move();
+    }, 4000);
+  }
+
+  function resetAuto() {
+    clearInterval(timer);
+    autoPlay();
+  }
+
+  autoPlay();
 });
