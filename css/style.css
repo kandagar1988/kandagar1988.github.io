@@ -174,7 +174,7 @@ footer {
 }
 
 #menuOverlay.active {
-  opacity: 1;
+  opacity: 0.6;
   pointer-events: auto;
 }
 
@@ -189,6 +189,8 @@ footer {
   transition: 0.3s;
   z-index: 1000;
   padding: 20px;
+
+  overflow-y: auto;
 }
 
 #sideMenu.active {
