@@ -325,10 +325,6 @@ footer {
   padding: 30px 20px;
 }
 
-.mobile-menu.open {
-  right: 0;
-}
-
 .mobile-menu .close {
   font-size: 30px;
   background: none;
@@ -387,10 +383,6 @@ footer {
   box-shadow: -5px 0 20px rgba(0,0,0,0.2);
 }
 
-.mobile-menu.open {
-  right: 0;
-}
-
 .mobile-menu .close {
   background: none;
   border: none;
@@ -426,18 +418,4 @@ footer {
     display: flex;
   }
 }
-<!-- OVERLAY -->
-<div id="menuOverlay"></div>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="sideMenu">
-  <button class="close" id="closeMenu">✕</button>
-
-  <nav class="mobile-nav">
-    <a href="index.html">Strona główna</a>
-    <a href="o-nas.html">O nas</a>
-    <a href="uslugi.html">Usługi</a>
-    <a href="realizacje.html">Realizacje</a>
-    <a href="kontakt.html">Kontakt</a>
-  </nav>
-</div>
