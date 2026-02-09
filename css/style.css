@@ -217,15 +217,18 @@ footer {
   cursor: pointer;
 }
 
-.side-nav a {
+#sideMenu .side-nav a {
   display: block;
-color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
   margin-bottom: 15px;
   font-size: 16px;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
-
-.side-nav a:hover { color: #38bdf8;}
+#sideMenu .side-nav a:hover {
+  color: #38bdf8 !important;
+}
 
 .side-contact {
   margin-top: 30px;
