@@ -418,4 +418,10 @@ footer {
     display: flex;
   }
 }
+.mobile-menu {
+  z-index: 9999;
+}
 
+#menuOverlay {
+  z-index: 9998;
+}
