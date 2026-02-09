@@ -403,11 +403,10 @@ footer {
 .mobile-nav a {
   text-decoration: none;
   font-size: 20px;
-  color: #111;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
+  color: #22c55e;          /* ЗЕЛЁНЫЙ цвет */
+  padding: 12px 0;
+  display: block;
 }
-
 /* ===== MOBILE ONLY ===== */
 @media (max-width: 768px) {
   .desktop-nav {
