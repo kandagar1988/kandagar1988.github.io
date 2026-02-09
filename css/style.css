@@ -375,7 +375,74 @@ footer {
   pointer-events: none;
   transition: opacity 0.3s;
 }
+/* === MOBILE SIDE MENU === */
 
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100vh;
+  background: #0f7a3a; /* ЗЕЛЁНЫЙ */
+  color: #fff;
+  z-index: 1001;
+  transition: right 0.3s ease;
+  padding: 20px;
+}
+
+#sideMenu.active {
+  right: 0;
+}
+
+.side-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.side-logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#closeMenu {
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mobile-nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.mobile-nav a:hover {
+  opacity: 0.8;
+}
+
+/* OVERLAY */
+#menuOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+#menuOverlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
 #menuOverlay.active {
   opacity: 1;
   pointer-events: all;
