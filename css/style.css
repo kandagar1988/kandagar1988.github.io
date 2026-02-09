@@ -544,3 +544,38 @@ z-index: 1001;
     display: block;
   }
 }
+/* === FORCE FIX MOBILE MENU TEXT === */
+
+#sideMenu {
+  position: fixed !important;
+  top: 0;
+  left: -320px;
+  width: 320px;
+  height: 100vh;
+  background: #0f172a !important;
+  z-index: 9999 !important;
+  overflow-y: auto;
+}
+
+#sideMenu.active {
+  left: 0;
+}
+
+#sideMenu * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#sideMenu a {
+  display: block !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 10000 !important;
+}
+
+#menuOverlay {
+  z-index: 9000 !important;
+}
