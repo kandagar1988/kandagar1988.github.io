@@ -447,3 +447,59 @@ footer {
   opacity: 1;
   pointer-events: all;
 }
+/* ===== MOBILE MENU FIX ===== */
+@media (max-width: 768px) {
+
+  /* показываем бургер */
+  .burger {
+    display: flex !important;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10001;
+  }
+
+  .burger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+  }
+
+  /* скрываем desktop меню */
+  .desktop-nav {
+    display: none !important;
+  }
+
+  /* боковое меню */
+  #sideMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    background: #fff;
+    z-index: 10000;
+    transition: right 0.3s ease;
+  }
+
+  #sideMenu.active {
+    right: 0;
+  }
+
+  /* overlay */
+  #menuOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  #menuOverlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
