@@ -798,10 +798,44 @@ z-index: 1001;
   margin-bottom: 40px;
 }
 
+/* ===== GALERIA REALIZACJI ===== */
 .realizacje-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.realizacje-grid img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.realizacje-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* планшет */
+@media (max-width: 1024px) {
+  .realizacje-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* телефон */
+@media (max-width: 600px) {
+  .realizacje-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .realizacje-grid img {
+    height: 220px;
+  }
 }
 
 .real-card {
