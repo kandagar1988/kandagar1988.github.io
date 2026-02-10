@@ -964,3 +964,59 @@ iframe {
     color: #cfcfcf;
     text-align: center;
 }
+/* ============================= */
+/* DESKTOP FIX – НЕ ТРОГАТЬ ВЫШЕ */
+/* ============================= */
+
+/* Ограничиваем ширину сайта */
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Общий контейнер для секций */
+section {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Галерея – нормальный вид на ноутбуке */
+.gallery,
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Фото в галерее */
+.gallery img,
+.gallery-grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Увеличение текста на больших экранах */
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
