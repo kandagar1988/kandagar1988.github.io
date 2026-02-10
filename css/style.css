@@ -1066,3 +1066,32 @@ section {
     font-size: 18px;
   }
 }
+/* ===== FINAL DESKTOP OVERRIDE ===== */
+@media (min-width: 1025px) {
+
+  .realizacje-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .realizacje-grid img {
+    height: 180px !important;
+    object-fit: cover;
+    transform: none !important;
+  }
+
+  body {
+    font-size: 18px !important;
+  }
+
+  section p,
+  .services-section p,
+  .real-info p {
+    font-size: 18px !important;
+  }
+
+  h1 { font-size: 40px !important; }
+  h2 { font-size: 30px !important; }
+  h3 { font-size: 22px !important; }
+}
