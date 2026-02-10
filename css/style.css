@@ -958,3 +958,9 @@ iframe {
   padding: 0 16px;
   box-sizing: border-box;
 }
+.hero-trust {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #cfcfcf;
+    text-align: center;
+}
