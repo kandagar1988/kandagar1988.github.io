@@ -1020,3 +1020,49 @@ section {
     font-size: 18px;
   }
 }
+/* ===== DESKTOP FIX: галерея + текст ===== */
+@media (min-width: 1025px) {
+
+  /* Галерея: уменьшаем визуально фото */
+  .realizacje-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .realizacje-grid img {
+    height: 200px;        /* БЫЛО 260px → стало компактно */
+    object-fit: cover;
+  }
+
+  .realizacje-grid img:hover {
+    transform: scale(1.01); /* меньше зума */
+  }
+
+  /* Основной текст */
+  body {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  /* Заголовки */
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  /* Текст под галереей и в секциях */
+  section p,
+  .services-section p,
+  .real-info p {
+    font-size: 18px;
+  }
+}
