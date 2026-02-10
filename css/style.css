@@ -942,7 +942,12 @@ section,
   padding-left: 16px;
   padding-right: 16px;
 }
-
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
 /* карта */
 iframe {
   max-width: 100%;
