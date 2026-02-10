@@ -917,3 +917,33 @@ z-index: 1001;
   margin: 0 auto;
   padding: 0 16px;
 }
+/* === DESKTOP FIX === */
+
+/* HERO текст */
+.hero h1,
+.hero p,
+.hero .hero-buttons {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* ВЕСЬ основной контент */
+section,
+.form-section,
+.map-section,
+.gallery-section,
+.services-section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* карта */
+iframe {
+  max-width: 100%;
+}
