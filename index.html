@@ -180,6 +180,13 @@ closeBtn.onclick = overlay.onclick = () => {
   sideMenu.classList.remove('active');
   overlay.classList.remove('active');
 };
+// 🔽 ВОТ ЭТО ДОБАВЛЯЕМ
+  document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+  });
 </script>
   <!-- OVERLAY -->
 <div id="menuOverlay"></div>
