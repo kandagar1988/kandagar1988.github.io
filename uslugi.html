@@ -1,30 +1,291 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Usługi remontowe – Vit-Bud</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usługi – Vit-Bud</title>
+
+<style>
+:root {
+  --green:#1fb56a;
+  --dark:#111;
+  --bg:#f6f6f6;
+}
+
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+  background:#000;
+  color:#fff;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo {
+  font-size:20px;
+  font-weight:bold;
+}
+
+.menu-btn {
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* ===== SLIDE MENU ===== */
+.menu {
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:100%;
+  max-width:380px;
+  height:100%;
+  background:#000;
+  color:#fff;
+  transition:.4s;
+  z-index:9999;
+  padding:30px;
+}
+
+.menu.active { right:0; }
+
+.menu h2 {
+  margin-top:0;
+  color:var(--green);
+}
+
+.menu a {
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  font-size:18px;
+  padding:12px 0;
+  border-bottom:1px solid #333;
+}
+
+.close {
+  font-size:26px;
+  position:absolute;
+  top:15px;
+  right:20px;
+  cursor:pointer;
+}
+
+/* ===== CONTENT ===== */
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:30px 20px;
+}
+
+h1 {
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:#fff;
+  border-radius:8px;
+  padding:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.card h3 {
+  margin-top:0;
+  color:var(--green);
+}
+
+.card button {
+  margin-top:15px;
+  background:var(--green);
+  border:none;
+  color:#fff;
+  padding:12px 18px;
+  font-size:16px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+/* ===== SLIDE PANEL ===== */
+.panel {
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:100%;
+  max-width:500px;
+  height:100%;
+  background:#fff;
+  transition:.4s;
+  z-index:10000;
+  overflow:auto;
+}
+
+.panel.active { right:0; }
+
+.panel-header {
+  background:#000;
+  color:#fff;
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.panel-header span {
+  font-size:24px;
+  cursor:pointer;
+}
+
+.panel-body {
+  padding:25px;
+}
+
+.panel-body h2 {
+  color:var(--green);
+  margin-top:0;
+}
+
+/* ===== FOOTER CONTACT ===== */
+.contact {
+  background:#000;
+  color:#fff;
+  padding:30px;
+  text-align:center;
+}
+
+.contact a {
+  color:var(--green);
+  font-size:18px;
+  text-decoration:none;
+  display:block;
+  margin:8px 0;
+}
+
+@media(max-width:768px){
+  .menu { max-width:100%; }
+  .panel { max-width:100%; }
+}
+</style>
 </head>
+
 <body>
 
-<header class="site-header">
-  <a href="index.html" class="logo">Vit-Bud</a>
-</header>
+<!-- TOP -->
+<div class="topbar">
+  <div class="logo">VIT-BUD</div>
+  <div class="menu-btn" onclick="openMenu()">☰</div>
+</div>
 
-<main class="uslugi-page">
+<!-- MENU -->
+<div class="menu" id="menu">
+  <div class="close" onclick="closeMenu()">✕</div>
+  <h2>Menu</h2>
+  <a href="/">Strona główna</a>
+  <a href="#uslugi">Usługi</a>
+  <a href="#kontakt">Kontakt</a>
+</div>
 
-  <h1>Usługi remontowe</h1>
+<!-- CONTENT -->
+<div class="container" id="uslugi">
+  <h1>Nasze usługi</h1>
 
-  <ul class="uslugi-list">
-    <li><a href="pakiety-wykonczeniowe.html">Pakiety wykończeniowe</a></li>
-    <li><a href="wykonczenia-wnetrz.html">Wykończenia wnętrz</a></li>
-    <li><a href="wykonczenia-komercyjne.html">Wykończenia komercyjne</a></li>
-    <li><a href="projekty-wnetrz.html">Projekty wnętrz</a></li>
-    <li><a href="meble-na-wymiar.html">Projekty i meble na wymiar</a></li>
-  </ul>
+  <div class="cards">
+    <div class="card">
+      <h3>Wykończenia mieszkań</h3>
+      <p>Kompleksowe prace wykończeniowe pod klucz.</p>
+      <button onclick="openPanel('mieszkania')">Zobacz</button>
+    </div>
 
-</main>
+    <div class="card">
+      <h3>Remont łazienki</h3>
+      <p>Hydraulika, glazura, armatura.</p>
+      <button onclick="openPanel('lazienka')">Zobacz</button>
+    </div>
+
+    <div class="card">
+      <h3>Malarstwo i gładzie</h3>
+      <p>Gładzie, malowanie, sufity.</p>
+      <button onclick="openPanel('malarstwo')">Zobacz</button>
+    </div>
+  </div>
+</div>
+
+<!-- PANEL -->
+<div class="panel" id="panel">
+  <div class="panel-header">
+    <div id="panel-title">Usługa</div>
+    <span onclick="closePanel()">✕</span>
+  </div>
+  <div class="panel-body" id="panel-content"></div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact" id="kontakt">
+  <h2>Kontakt</h2>
+  <a href="tel:+48787118032">📞 +48 787 118 032</a>
+  <a href="https://wa.me/48787118032">💬 WhatsApp</a>
+  <a href="mailto:vitalijtyckovskij@gmail.com">✉️ Email</a>
+</div>
+
+<script>
+const data = {
+  mieszkania: `
+    <h2>Wykończenia mieszkań</h2>
+    <p>Pełne wykończenie mieszkań od stanu deweloperskiego.</p>
+    <ul>
+      <li>✔ ściany i sufity</li>
+      <li>✔ podłogi i płytki</li>
+      <li>✔ elektryka i hydraulika</li>
+    </ul>
+  `,
+  lazienka: `
+    <h2>Remont łazienki</h2>
+    <p>Nowoczesne i funkcjonalne łazienki.</p>
+    <ul>
+      <li>✔ płytki</li>
+      <li>✔ instalacje</li>
+      <li>✔ armatura</li>
+    </ul>
+  `,
+  malarstwo: `
+    <h2>Malarstwo i gładzie</h2>
+    <p>Estetyczne i trwałe wykończenie.</p>
+    <ul>
+      <li>✔ gładzie gipsowe</li>
+      <li>✔ malowanie</li>
+      <li>✔ sufity</li>
+    </ul>
+  `
+};
+
+function openMenu(){
+  document.getElementById('menu').classList.add('active');
+}
+function closeMenu(){
+  document.getElementById('menu').classList.remove('active');
+}
+
+function openPanel(type){
+  document.getElementById('panel-title').innerText = 'Usługa';
+  document.getElementById('panel-content').innerHTML = data[type];
+  document.getElementById('panel').classList.add('active');
+}
+function closePanel(){
+  document.getElementById('panel').classList.remove('active');
+}
+</script>
 
 </body>
 </html>
