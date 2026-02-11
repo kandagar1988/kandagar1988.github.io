@@ -1138,3 +1138,18 @@ img {
   max-width: 100%;
   height: auto;
 }
+.realizacje-grid {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 15px;
+}
+
+.realizacje-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
