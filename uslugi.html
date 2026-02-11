@@ -6,128 +6,284 @@
 <title>Usługi – Vit-Bud</title>
 
 <style>
+:root {
+  --green:#1fb56a;
+  --dark:#111;
+  --bg:#f6f6f6;
+}
+
 body {
+  margin:0;
   font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f2f2f2;
+  background:var(--bg);
 }
 
-h1 {
-  text-align: center;
-  margin: 30px 0;
+/* ===== TOP BAR ===== */
+.topbar {
+  background:#000;
+  color:#fff;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.services {
-  max-width: 900px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+.logo {
+  font-size:20px;
+  font-weight:bold;
 }
 
-.service {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
+.menu-btn {
+  font-size:26px;
+  cursor:pointer;
 }
 
-.service h3 {
-  color: #2bb673;
+/* ===== SLIDE MENU ===== */
+.menu {
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:100%;
+  max-width:380px;
+  height:100%;
+  background:#000;
+  color:#fff;
+  transition:.4s;
+  z-index:9999;
+  padding:30px;
 }
 
-button {
-  background: #2bb673;
-  color: #fff;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  cursor: pointer;
+.menu.active { right:0; }
+
+.menu h2 {
+  margin-top:0;
+  color:var(--green);
 }
 
-/* OVERLAY */
-#overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: none;
-}
-
-/* PANEL */
-#panel {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 90%;
-  max-width: 400px;
-  height: 100%;
-  background: #fff;
-  padding: 20px;
-  transition: 0.3s;
-  overflow-y: auto;
-}
-
-#panel.active {
-  right: 0;
-}
-
-#overlay.active {
-  display: block;
+.menu a {
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  font-size:18px;
+  padding:12px 0;
+  border-bottom:1px solid #333;
 }
 
 .close {
-  font-size: 24px;
-  cursor: pointer;
-  text-align: right;
+  font-size:26px;
+  position:absolute;
+  top:15px;
+  right:20px;
+  cursor:pointer;
+}
+
+/* ===== CONTENT ===== */
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:30px 20px;
+}
+
+h1 {
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:#fff;
+  border-radius:8px;
+  padding:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.card h3 {
+  margin-top:0;
+  color:var(--green);
+}
+
+.card button {
+  margin-top:15px;
+  background:var(--green);
+  border:none;
+  color:#fff;
+  padding:12px 18px;
+  font-size:16px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+/* ===== SLIDE PANEL ===== */
+.panel {
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:100%;
+  max-width:500px;
+  height:100%;
+  background:#fff;
+  transition:.4s;
+  z-index:10000;
+  overflow:auto;
+}
+
+.panel.active { right:0; }
+
+.panel-header {
+  background:#000;
+  color:#fff;
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.panel-header span {
+  font-size:24px;
+  cursor:pointer;
+}
+
+.panel-body {
+  padding:25px;
+}
+
+.panel-body h2 {
+  color:var(--green);
+  margin-top:0;
+}
+
+/* ===== FOOTER CONTACT ===== */
+.contact {
+  background:#000;
+  color:#fff;
+  padding:30px;
+  text-align:center;
+}
+
+.contact a {
+  color:var(--green);
+  font-size:18px;
+  text-decoration:none;
+  display:block;
+  margin:8px 0;
+}
+
+@media(max-width:768px){
+  .menu { max-width:100%; }
+  .panel { max-width:100%; }
 }
 </style>
 </head>
 
 <body>
 
-<h1>Nasze usługi</h1>
+<!-- TOP -->
+<div class="topbar">
+  <div class="logo">VIT-BUD</div>
+  <div class="menu-btn" onclick="openMenu()">☰</div>
+</div>
 
-<div class="services">
-  <div class="service">
-    <h3>Wykończenia mieszkań</h3>
-    <p>Kompleksowe prace wykończeniowe.</p>
-    <button onclick="openPanel('Wykończenia mieszkań','Pełny opis usługi wykończenia mieszkań pod klucz.')">Zobacz</button>
-  </div>
+<!-- MENU -->
+<div class="menu" id="menu">
+  <div class="close" onclick="closeMenu()">✕</div>
+  <h2>Menu</h2>
+  <a href="/">Strona główna</a>
+  <a href="#uslugi">Usługi</a>
+  <a href="#kontakt">Kontakt</a>
+</div>
 
-  <div class="service">
-    <h3>Remont łazienki</h3>
-    <p>Hydraulika, glazura, armatura.</p>
-    <button onclick="openPanel('Remont łazienki','Kompleksowy remont łazienek.')">Zobacz</button>
-  </div>
+<!-- CONTENT -->
+<div class="container" id="uslugi">
+  <h1>Nasze usługi</h1>
 
-  <div class="service">
-    <h3>Malarstwo i gładzie</h3>
-    <p>Gładzie, malowanie, sufity.</p>
-    <button onclick="openPanel('Malarstwo i gładzie','Profesjonalne malowanie wnętrz.')">Zobacz</button>
+  <div class="cards">
+    <div class="card">
+      <h3>Wykończenia mieszkań</h3>
+      <p>Kompleksowe prace wykończeniowe pod klucz.</p>
+      <button onclick="openPanel('mieszkania')">Zobacz</button>
+    </div>
+
+    <div class="card">
+      <h3>Remont łazienki</h3>
+      <p>Hydraulika, glazura, armatura.</p>
+      <button onclick="openPanel('lazienka')">Zobacz</button>
+    </div>
+
+    <div class="card">
+      <h3>Malarstwo i gładzie</h3>
+      <p>Gładzie, malowanie, sufity.</p>
+      <button onclick="openPanel('malarstwo')">Zobacz</button>
+    </div>
   </div>
 </div>
 
-<!-- OVERLAY -->
-<div id="overlay" onclick="closePanel()"></div>
-
 <!-- PANEL -->
-<div id="panel">
-  <div class="close" onclick="closePanel()">✕</div>
-  <h2 id="panelTitle"></h2>
-  <p id="panelText"></p>
+<div class="panel" id="panel">
+  <div class="panel-header">
+    <div id="panel-title">Usługa</div>
+    <span onclick="closePanel()">✕</span>
+  </div>
+  <div class="panel-body" id="panel-content"></div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact" id="kontakt">
+  <h2>Kontakt</h2>
+  <a href="tel:+48787118032">📞 +48 787 118 032</a>
+  <a href="https://wa.me/48787118032">💬 WhatsApp</a>
+  <a href="mailto:vitalijtyckovskij@gmail.com">✉️ Email</a>
 </div>
 
 <script>
-function openPanel(title, text) {
-  document.getElementById('panelTitle').innerText = title;
-  document.getElementById('panelText').innerText = text;
-  document.getElementById('panel').classList.add('active');
-  document.getElementById('overlay').classList.add('active');
+const data = {
+  mieszkania: `
+    <h2>Wykończenia mieszkań</h2>
+    <p>Pełne wykończenie mieszkań od stanu deweloperskiego.</p>
+    <ul>
+      <li>✔ ściany i sufity</li>
+      <li>✔ podłogi i płytki</li>
+      <li>✔ elektryka i hydraulika</li>
+    </ul>
+  `,
+  lazienka: `
+    <h2>Remont łazienki</h2>
+    <p>Nowoczesne i funkcjonalne łazienki.</p>
+    <ul>
+      <li>✔ płytki</li>
+      <li>✔ instalacje</li>
+      <li>✔ armatura</li>
+    </ul>
+  `,
+  malarstwo: `
+    <h2>Malarstwo i gładzie</h2>
+    <p>Estetyczne i trwałe wykończenie.</p>
+    <ul>
+      <li>✔ gładzie gipsowe</li>
+      <li>✔ malowanie</li>
+      <li>✔ sufity</li>
+    </ul>
+  `
+};
+
+function openMenu(){
+  document.getElementById('menu').classList.add('active');
+}
+function closeMenu(){
+  document.getElementById('menu').classList.remove('active');
 }
 
-function closePanel() {
+function openPanel(type){
+  document.getElementById('panel-title').innerText = 'Usługa';
+  document.getElementById('panel-content').innerHTML = data[type];
+  document.getElementById('panel').classList.add('active');
+}
+function closePanel(){
   document.getElementById('panel').classList.remove('active');
-  document.getElementById('overlay').classList.remove('active');
 }
 </script>
 
