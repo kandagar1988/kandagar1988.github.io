@@ -1114,3 +1114,27 @@ section {
   h2 { font-size: 30px !important; }
   h3 { font-size: 22px !important; }
 }
+/* ===== FIX GALERIA REALIZACJE ===== */
+
+.realizacje-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.realizacje-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* zabezpieczenie dla wszystkich obrazów */
+img {
+  max-width: 100%;
+  height: auto;
+}
