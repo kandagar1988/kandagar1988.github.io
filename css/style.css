@@ -1090,7 +1090,26 @@ section {
   .real-info p {
     font-size: 18px !important;
   }
+/* === FIX: галерея не растягивает экран === */
 
+.realizacje-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.realizacje-grid img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
   h1 { font-size: 40px !important; }
   h2 { font-size: 30px !important; }
   h3 { font-size: 22px !important; }
