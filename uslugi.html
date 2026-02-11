@@ -270,22 +270,32 @@ const data = {
   `
 };
 
-function openMenu(){
-  document.getElementById('menu').classList.add('active');
-}
-function closeMenu(){
-  document.getElementById('menu').classList.remove('active');
+<script>
+function openPanel(title, text) {
+  document.getElementById('panelTitle').innerText = title;
+  document.getElementById('panelText').innerText = text;
+  document.getElementById('servicePanel').classList.add('active');
+  document.getElementById('overlay').classList.add('active');
 }
 
-function openPanel(type){
-  document.getElementById('panel-title').innerText = 'Usługa';
-  document.getElementById('panel-content').innerHTML = data[type];
-  document.getElementById('panel').classList.add('active');
-}
-function closePanel(){
-  document.getElementById('panel').classList.remove('active');
+function closePanel() {
+  document.getElementById('servicePanel').classList.remove('active');
+  document.getElementById('overlay').classList.remove('active');
 }
 </script>
+</script>
+  <!-- SIDE PANEL -->
+<div id="servicePanel" class="service-panel">
+  <button class="panel-close" onclick="closePanel()">×</button>
+
+  <h2 id="panelTitle">Tytuł usługi</h2>
+  <p id="panelText">
+    Opis usługi pojawi się tutaj po kliknięciu.
+  </p>
+</div>
+
+<!-- OVERLAY -->
+<div id="overlay" class="overlay" onclick="closePanel()"></div>
 
 </body>
 </html>
