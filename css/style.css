@@ -393,16 +393,7 @@ z-index: 1001;
   opacity: 0.8;
 }
 
-/* OVERLAY */
-#menuOverlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
-}
+
 /* === MOBILE SIDE MENU === */
 
 #sideMenu {
@@ -456,16 +447,7 @@ z-index: 1001;
   opacity: 0.8;
 }
 
-/* OVERLAY */
-#menuOverlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
-}
+
 
 #menuOverlay.active {
   opacity: 1;
