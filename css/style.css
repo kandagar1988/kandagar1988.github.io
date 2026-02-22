@@ -1152,3 +1152,13 @@ img {
   visibility: visible;
   pointer-events: auto;
 }
+.seo-section{
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+}
+
+.seo-section h2{
+  margin-bottom: 15px;
+}
