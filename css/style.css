@@ -1295,10 +1295,7 @@ body.menu-open {
   transition: opacity .3s ease;
 }
 
-.menuOverlay.open{
-  opacity: 1;
-  pointer-events: auto;
-}
+
 /* затемнение фона */
 #menuOverlay{
   position: fixed;
