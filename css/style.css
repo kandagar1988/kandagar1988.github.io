@@ -1264,3 +1264,43 @@ body.menu-open{
 body.menu-open {
   overflow: hidden;
 }
+/* ===== MOBILE MENU FIX FINAL ===== */
+
+.sideMenu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  max-width: 85vw;
+  height: 100vh;
+  background: #000;
+  z-index: 99999;
+  transform: translateX(100%);
+  transition: transform .3s ease;
+  overflow-y: auto;
+}
+
+.sideMenu.open{
+  transform: translateX(0);
+}
+
+/* затемнение фона */
+.menuOverlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+
+.menuOverlay.open{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* блокировка скролла */
+body.menu-open{
+  overflow: hidden;
+}
