@@ -1202,3 +1202,21 @@ img {
   z-index: 10000;
   padding: 10px;
 }
+.mobile-menu{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100%;
+  background: #0b1220;
+  transition: right .3s ease;
+  z-index: 9999;
+}
+
+.mobile-menu.active{
+  right: 0;
+}
+
+body.menu-open{
+  overflow: hidden;
+}
