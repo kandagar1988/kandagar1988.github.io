@@ -1171,3 +1171,34 @@ img {
   z-index: 9999;
   padding: 10px;
 }
+/* 🔥 фикс мобильного меню */
+.mobile-menu,
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 280px;
+  z-index: 9999;
+}
+
+/* затемнение фона */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+}
+
+/* крестик */
+#closeMenu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10000;
+  padding: 10px;
+}
