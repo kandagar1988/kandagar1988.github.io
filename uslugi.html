@@ -41,17 +41,18 @@ body {
 
 /* ===== SLIDE MENU ===== */
 .menu {
-  position:fixed;
-  top:0;
-  right:-100%;
-  width:100%;
-  max-width:380px;
-  height:100%;
-  background:#000;
-  color:#fff;
-  transition:.4s;
-  z-index:9999;
-  padding:30px;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  max-width: 85vw;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  transition: right .3s ease;
+  z-index: 9999;
+  padding: 30px;
+  overflow-y: auto;
 }
 
 .menu.active { right:0; }
@@ -217,6 +218,15 @@ h1 {
   <a href="#uslugi">Usługi</a>
   <a href="#kontakt">Kontakt</a>
 </div>
+  <div id="menuOverlay" onclick="closeMenu()" style="
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,.5);
+opacity: 0;
+pointer-events: none;
+transition: .3s;
+z-index: 9998;
+"></div>
 
 <!-- CONTENT -->
 <div class="container" id="uslugi">
