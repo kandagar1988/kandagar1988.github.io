@@ -1220,3 +1220,47 @@ img {
 body.menu-open{
   overflow: hidden;
 }
+/* ===== MOBILE MENU FIX (FINAL) ===== */
+
+/* само меню */
+.sideMenu,
+.menu,
+.nav-menu {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 280px !important;
+  max-width: 85vw !important;
+  height: 100vh !important;
+  background: #000 !important;
+  z-index: 9999 !important;
+  transform: translateX(100%) !important;
+  transition: transform 0.3s ease !important;
+  overflow-y: auto !important;
+}
+
+/* открытое меню */
+.sideMenu.open,
+.menu.open,
+.nav-menu.open,
+.sideMenu.active,
+.menu.active,
+.nav-menu.active {
+  transform: translateX(0) !important;
+}
+
+/* крестик закрытия */
+.close,
+#closeMenu,
+.menu-close {
+  position: absolute !important;
+  top: 15px !important;
+  right: 15px !important;
+  z-index: 10000 !important;
+  cursor: pointer !important;
+}
+
+/* чтобы ничего не перекрывало */
+body.menu-open {
+  overflow: hidden;
+}
