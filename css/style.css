@@ -1299,7 +1299,21 @@ body.menu-open {
   opacity: 1;
   pointer-events: auto;
 }
+/* затемнение фона */
+#menuOverlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
 
+#menuOverlay.active{
+  opacity: 1;
+  pointer-events: auto;
+}
 /* блокировка скролла */
 body.menu-open{
   overflow: hidden;
